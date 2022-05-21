@@ -33,13 +33,11 @@
 
 ### 기대 효과
 - 외대 글로벌캠퍼스의 장점을 부각시켜 학교 생활의 만족도를 높이고자 합니다.
-- 김재우 push 
 
 
 ### 팀프로젝트 참여 & 기여자
 
 |고도희|김다은|김재우|김희원|서지오|이준서|정채빈
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Team Lead, PM | Character Designer | UIUX, Developer | Developer | Developer | Planning | Developer |
+| Team Lead, PM | Character Designer | UI/UX, Developer | Developer | Developer | Planning | Developer |
 |서비스를 설계하는 개발자가 되고 싶은 고도희입니다. | 어떤 디자이너가 되고 싶은.. | 풀스택 개발자가 되고 싶은 김재우입니다. |인공지능에 관심 있는 백엔드 개발자 김희원입니다.| 금융관련 백엔드 개발자가 되고 싶은 서지오입니다. | 인생을 기획하는 준서입니다! | Interactive Developer가 되고싶은 정채빈입니다.|
-`
