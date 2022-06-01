@@ -20,7 +20,6 @@ import pages.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', pages.views.home, name='home'),
-<<<<<<< Updated upstream
     path('onbaord/', pages.views.onboard, name='onboard'),
     path('onboard1/', pages.views.onboard1, name='onboard1'),
     # 특정 대상만 이동하는 페이지
@@ -37,7 +36,5 @@ urlpatterns = [
     path('question5/', pages.views.question5, name='question5'),
     path('question6/', pages.views.question6, name='question6'),
     path('result/', pages.views.result, name='result'),
-=======
     path('test/', pages.views.test, name='test')
->>>>>>> Stashed changes
 ]
