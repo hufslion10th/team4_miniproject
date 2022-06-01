@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,6 +12,7 @@
     <!-- intro -->
     <section id="intro">
         <img src="" alt="logo" class="intro__logo">
+        <img src="{% static "img/cherryblossom.png" %}">
         <p class="intro__content">모현의 숲에서 나는 어떤 동물일까?</p>
         <button class="intro__btn"> <a href= "{% url 'onboard' %}">테스트 시작하기</a> </button>
         
@@ -19,8 +20,6 @@
     </section>
 </body>
 </html>
-=======
 hello django
 
 <button><a href="./test">이동하기</a></button>
->>>>>>> Stashed changes

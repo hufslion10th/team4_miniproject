@@ -4,7 +4,6 @@ from django.shortcuts import render
 def home(request):
   return render(request, 'index.html') #index.html을 띄워주는 함수
 
-<<<<<<< Updated upstream
 def onboard(request):
   return render(request, 'onboard.html')
 
@@ -46,7 +45,5 @@ def question6(request):
 
 def result(request):
   return render(request, 'result.html')
-=======
 def test(request):
   return render(request, 'test.html') #test.html을 띄워주는 함수
->>>>>>> Stashed changes
