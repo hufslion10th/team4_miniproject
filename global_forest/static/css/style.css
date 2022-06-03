@@ -1,0 +1,155 @@
+:root {
+  /*color*/
+  --color-rice-color: #FFFBEE;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-text-color: #412917;
+  --color-light-green: #E1F0A3;
+  
+  /*font sizes */
+  --font-large: 32px;
+  --font-medium: 24px;
+  --font-regular: 16px;
+  --font-micro: 12px;
+
+  /*Animation */
+  --animation-duration: 250ms;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+  background-color: var(--color-rice-color);
+  color: var(--color-text-color);
+}
+
+p {
+  margin: 10px;
+}
+
+#opening, #onboard, #onboard1, #onboard1_1, #onboard1_2, #onboard1_3,
+#question1, #question2, #question3, #question4, #question5, #question6, #result{
+  display: none;
+}
