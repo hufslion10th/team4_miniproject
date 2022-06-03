@@ -1,4 +1,4 @@
-<!-- {% load static %} -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모여봐요! 모현의 숲</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script src="{% static 'js/main.js' %}" defer></script> -->
+
+    <script src="{% static 'js/main.js' %}" defer></script>
+
     <link rel="stylesheet" href="temp.css">
     <script src="temp.js" defer></script>
 </head>
@@ -15,11 +17,11 @@
     <!-- intro -->
     <section id="intro">
         <div class="intro__container">
-            <img src="temp/logo.png" alt="logo" class="intro__logo">
+            <img src="{% static 'img/logo.png' %}" alt="logo" class="intro__logo">
             <p class="intro__content">모현의 숲에서 나는 어떤 동물일까?</p>
             <button class="intro__btn" onclick="js:next1()">테스트 시작하기</button>
             <div class="intro__footer">
-                <img src="temp/hufs.png" alt="" class="intro__footer__img">
+                <img src="{% static 'img/hufs.png' %}" alt="" class="intro__footer__img">
                 <p class="intro__footer__p">한국외대 글로벌캠퍼스</p>
             </div>
         </div>
@@ -31,7 +33,7 @@
             <p class="opening__content">
                 어느날, 정신을 차려보니 한국외대 글로벌캠퍼스에 도착해있는 당신
             </p>
-            <img src="temp/cherryblossom.png" alt="" class="opening__img">
+            <img src="{% static 'img/cherryblossom.png' %}" alt="" class="opening__img">
             <p class="opening__content">
                 용인시 모현, 산으로 둘러쌓여<br>
                 "모현의 숲"이라고도 불리는 외대 글캠,<br>
@@ -50,7 +52,10 @@
                 </p>
                 <p class="onbard__content__small">(닉네임)</p>
             </div>
-            <input type="text" class="onboard__name">
+            <!-- <input type="text" class="onboard__name"> -->
+            <form action="">
+                {{ result.nickname }}
+            </form>
             <button class="onboard__btn" onclick="js:next3()">Enter</button>
         </div>
     </section>
@@ -77,12 +82,17 @@
             <div class="onboard1_1__num">
                 <p class="onboard1_1__num__text">학번을 입력해주세요</p>
                 <p class="onboard1_1__num__subtext">숫자만 입력해주세요 (예: 18)</p>
-                <input type="text" class="onboard1_1__num__input">
+                <form action="">
+                    {{ result.student_number }}
+                </form>
             </div>
             <div class="onboard1_1__major">
                 <p class="onboard1_1__major__text">학과</p>
                 <p class="onboard1_1__major__subtext">띄어쓰기 없이 입력해주세요 (예: 컴퓨터공학과)</p>
-                <input type="text" class="onboard1_1__major__input">
+                <!-- <input type="text" class="onboard1_1__major__input"> -->
+                <form action="">
+                    {{ result.major }}
+                </form>
             </div>
             <button class="onboard1_1__btn" onclick="js:next7()">모현의 숲 입장!</button>
         </div>
@@ -92,7 +102,7 @@
     <section id="onboard1_2">
         <div class="onboard1_2__container">
             <p class="onboard1_2__content">예비 샌애기로군요! <br> "모현의 숲"에 오신걸 환영합니다</p>
-            <img src="temp/cherryblossom.png" alt="" class="onboard1_2__img">
+            <img src="{% static 'img/cherryblossom.png' %}" alt="" class="onboard1_2__img">
             <button class="onboard1_1__btn" onclick="js:next8()">모현의 숲 입장!</button>
         </div>
     </section>
@@ -101,7 +111,7 @@
     <section id="onboard1_3">
         <div class="onboard1_3__container">
             <p class="onboard1_3__content">"모현의 숲"은 처음이겠군요! <br> 환영합니다</p>
-            <img src="temp/cherryblossom.png" alt="" class="onboard1_3__img">
+            <img src="{% static 'img/cherryblossom.png' %}" alt="" class="onboard1_3__img">
             <button class="onboard1_1__btn" onclick="js:next9()">모현의 숲 입장!</button>
         </div>
     </section>
