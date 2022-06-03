@@ -7,12 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모여봐요! 모현의 숲</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
     <script src="{% static 'js/main.js' %}" defer></script>
-
-    <link rel="stylesheet" href="temp.css">
-    <script src="temp.js" defer></script>
 </head>
+
 <body>
     <!-- intro -->
     <section id="intro">
@@ -127,10 +124,10 @@
             <br>이 동물은?
         </p>
         <div class="question1__a">
-            <button class="question1__a__1" onclick="js:next10()">부엉이</button>
-            <button class="question1__a__2" onclick="js:next10()">고양이</button>
-            <button class="question1__a__3" onclick="js:next10()">너구리</button>
-            <button class="question1__a__4" onclick="js:next10()">아기사슴</button>
+            <button class="question1__a__1" onclick="js:next10('부엉이')">부엉이</button>
+            <button class="question1__a__2" onclick="js:next10('고양이')">고양이</button>
+            <button class="question1__a__3" onclick="js:next10('너구리')">너구리</button>
+            <button class="question1__a__4" onclick="js:next10('아기사슴')">아기사슴</button>
         </div>
     </section>
 
@@ -144,11 +141,10 @@
             주변을 살펴보자, 뭐가 있지?
         </p>
         <div class="question2__a">
-            <button class="question2__a__1" onclick="js:next11()">저 멀리서 음악 소리가 들린다</button>
-            <button class="question2__a__2" onclick="js:next11()">반짝이는 바다가 보인다</button>
-            <button class="question2__a__3" onclick="js:next11()">하늘로 높게 뻗은 나무가 있다</button>
-            <button class="question2__a__4" onclick="js:next11()">축제가 한창이다</button>
-            <button class="question2__a__5" onclick="js:next11()">사막에 오아시스가 보인다</button>
+            <button class="question2__a__1" onclick="js:next11('아시아')">반짝이는 바다가 보인다</button>
+            <button class="question2__a__2" onclick="js:next11('유럽')">하늘로 높게 뻗은 나무가 있다</button>
+            <button class="question2__a__3" onclick="js:next11('아메리카')">축제가 한창이다</button>
+            <button class="question2__a__4" onclick="js:next11('아프리카')">사막에 오아시스가 보인다</button>
         </div>
     </section>
 
@@ -162,11 +158,11 @@
             당신이 지낼 장소는?
         </p>
         <div class="question3__a">
-            <button class="question3__a__1" onclick="js:next12()">폭신한 땅속 단칸방</button>
-            <button class="question3__a__2" onclick="js:next12()">고요한 호숫가 옆 움막</button>
-            <button class="question3__a__3" onclick="js:next12()">산 속 어둑한 동굴</button>
-            <button class="question3__a__4" onclick="js:next12()">나무꼭대기 오두막집</button>
-            <button class="question3__a__5" onclick="js:next12()">광야</button>
+            <button class="question3__a__1" onclick="js:next12('비온뒤땅냄새를좋아하는')">폭신한 땅속 단칸방</button>
+            <button class="question3__a__2" onclick="js:next12('집앞낚시금지')">고요한 호숫가 옆 움막</button>
+            <button class="question3__a__3" onclick="js:next12('집을사랑하는')">산 속 어둑한 동굴</button>
+            <button class="question3__a__4" onclick="js:next12('마치타잔')">나무꼭대기 오두막집</button>
+            <button class="question3__a__5" onclick="js:next12('blackmamba')">광야</button>
         </div>
     </section>
 
@@ -180,10 +176,10 @@
             <br>동물 친구들과 어떤 음식을 먹을까?
         </p>
         <div class="question4__a">
-            <button class="question4__a__1" onclick="js:next13()">치킨과 맥주</button>
-            <button class="question4__a__2" onclick="js:next13()">아메리카노와 크로플</button>
-            <button class="question4__a__3" onclick="js:next13()">삼겹살에 소주</button>
-            <button class="question4__a__4" onclick="js:next13()">스테이크와 와인</button>
+            <button class="question4__a__1" onclick="js:next13('치맥')">치킨과 맥주</button>
+            <button class="question4__a__2" onclick="js:next13('술찌')">아메리카노와 크로플</button>
+            <button class="question4__a__3" onclick="js:next13('멋사')">삼겹살에 소주</button>
+            <button class="question4__a__4" onclick="js:next13('FLEX')">스테이크와 와인</button>
         </div>
     </section>
 
@@ -196,10 +192,10 @@
             이곳에서 일주일이 지났다. 모현의 숲에서 당신의 일상 모습은?
         </p>
         <div class="question5__a">
-            <button class="question5__a__1" onclick="js:next14()">sns에 일상을 기록한다</button>
-            <button class="question5__a__2" onclick="js:next14()">밤새도록 컴퓨터 게임을 한다</button>
-            <button class="question5__a__3" onclick="js:next14()">친구들을 위해 요리한다</button>
-            <button class="question5__a__4" onclick="js:next14()">판타지 영화를 본다</button>
+            <button class="question5__a__1" onclick="js:next14('예술가')">sns에 일상을 기록한다</button>
+            <button class="question5__a__2" onclick="js:next14('개발자')">밤새도록 컴퓨터 게임을 한다</button>
+            <button class="question5__a__3" onclick="js:next14('요리사')">친구들을 위해 요리한다</button>
+            <button class="question5__a__4" onclick="js:next14('마법사')">판타지 영화를 본다</button>
         </div>
     </section>
 
@@ -212,10 +208,10 @@
             오늘도 뿌듯한 하루였다. 하루를 끝마치며 잠든 나의 모습은?
         </p>
         <div class="question6__a">
-            <button class="question6__a__1" onclick="js:next15()">눕자마자 잠이 든다</button>
-            <button class="question6__a__2" onclick="js:next15()">옆으로 누워잔다</button>
-            <button class="question6__a__3" onclick="js:next15()">이불을 끌어안고 잔다</button>
-            <button class="question6__a__4" onclick="js:next15()">잠버릇이 고약하다</button>
+            <button class="question6__a__1" onclick="js:next15('잠만보')">눕자마자 잠이 든다</button>
+            <button class="question6__a__2" onclick="js:next15('새우잠')">옆으로 누워잔다</button>
+            <button class="question6__a__3" onclick="js:next15('이불도둑')">이불을 끌어안고 잔다</button>
+            <button class="question6__a__4" onclick="js:next15('코골이')">잠버릇이 고약하다</button>
         </div>
     </section>
 
@@ -233,18 +229,18 @@
             <p class="result__content">00님, 모현의 숲에서 당신은</p>
             <!-- <img src="" alt="" class="result__img"> -->
             <div class="result__img"></div>
-            <h1 class="result__animal">아시아에서 살고 <br> 개발자인 아기사슴</h1>
-            <p class="result__description">당신은 디버깅을 잘하는 <br> 아시아의 아기 사슴이군요!</p>
-            <button class="result__tag">tag</button>
-            <button class="result__tag">tag</button>
-            <button class="result__tag">tag</button>
+            <h1 class="result__sentence"></h1>
+            <p class="result__description"></p>
+            <button class="result__tag_1">tag</button>
+            <button class="result__tag_2">tag</button>
+            <button class="result__tag_3">tag</button>
             <div class="result__sns">
                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6298c97359c75b1a"></script>
                 <div class="addthis_inline_share_toolbox_eojj"></div>
             
             </div>
             <button class="result__discord">외대 디스코드 입장</button>
-            <button class="result__retry">다시 테스트하기</button>
+            <button class="result__retry" onclick="js:next10">다시 테스트하기</button>
         </div>
     </section>
 </body>
