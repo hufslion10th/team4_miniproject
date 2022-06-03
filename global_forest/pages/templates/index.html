@@ -50,8 +50,15 @@
                 </p>
                 <p class="onbard__content__small">(닉네임)</p>
             </div>
-            <input type="text" class="onboard__name">
-            <button class="onboard__btn">Enter</button>
+            <!-- <input type="text" class="onboard__name"> -->
+            <form action="" method="POST">
+                {% csrf_token %}
+                <table>
+                    {{ result.nickname }}
+                </table>
+                <button class="onboard__btn">Enter</button>
+            </form>
+            <!-- <button class="onboard__btn">Enter</button> -->
         </div>
     </section>
 
@@ -77,12 +84,24 @@
             <div class="onboard1_1__num">
                 <p class="onboard1_1__num__text">학번을 입력해주세요</p>
                 <p class="onboard1_1__num__subtext">숫자만 입력해주세요 (예: 18)</p>
-                <input type="text" class="onboard1_1__num__input">
+                <!-- <input type="text" class="onboard1_1__num__input"> -->
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        {{ result.student_number }}
+                    </table>
+                </form>
             </div>
             <div class="onboard1_1__major">
                 <p class="onboard1_1__major__text">학과</p>
                 <p class="onboard1_1__major__subtext">띄어쓰기 없이 입력해주세요 (예: 컴퓨터공학과)</p>
-                <input type="text" class="onboard1_1__major__input">
+                <!-- <input type="text" class="onboard1_1__major__input"> -->
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        {{ result.major }}
+                    </table>
+                </form>
             </div>
             <button class="onboard1_1__btn">모현의 숲 입장!</button>
         </div>
