@@ -18,10 +18,18 @@ let keyArray = new Array();
 let tagArray = new Array();
 
 const descriptionArray = [
-    {"key":"아시아에서 살고 개발자인 고양이", "description": "당신은 디버깅을 잘하는 아시아의 아기 사슴이군요!"},
+    {"key":"아시아에서 살고 개발자인 아기사슴", "description": "당신은 디버깅을 잘하는 아시아의 아기 사슴이군요!"},
     {"key":"아시아에서 살고 개발자인 너구리", "description": "당신은 코딩 천재 매운맛 아시안 농심 너구리군요!"},
     {"key":"아시아에서 살고 개발자인 부엉이", "description": "당신은 그 귀하다는 외대 출신 개발자 BOO입니까?"},
     {"key":"아시아에서 살고 개발자인 고양이", "description": "당신은 노트북만 보고있는 아시아의 고양이군요!!"},
+    {"key":"아시아에서 살고 예술가인 아기사슴", "description": "당신은 아시아의 패션 트렌드를 선두하는 옷잘알 아기사슴이군요!"},
+    {"key":"아시아에서 살고 예술가인 너구리", "description": "당신은 아시아에서 농심 표지 디자인을 한 너구리군요!"},
+    {"key":"아시아에서 살고 예술가인 부엉이", "description": "당신은 아시아를 대표하는 세계를 순회하며 노래하는 부엉이군요!"},
+    {"key":"아시아에서 살고 예술가인 고양이", "description": "당신은 아시아 거리를 자유롭게 거닐며 예술을 하는 고양이군요!"},
+    {"key":"아시아에서 살고 요리사인 아기사슴", "description": "당신은 솜방망이로 요리하는 아시안 셰프 고양이군요!"},
+    {"key":"아시아에서 살고 요리사인 너구리", "description": "당신은 농심에서 스카웃한 코리안 너구리군요!"},
+    {"key":"아시아에서 살고 요리사인 부엉이", "description": "당신은 아시아에서 자취 요리를 마스터한 부엉이군요! "},
+    {"key":"아시아에서 살고 요리사인 고양이", "description": "당신은 한국의 떡볶이를 세계화시킨 아기사슴이군요! "},
     //js에서 이미지 불러오기 https://hokeydokey.tistory.com/96 
 ];
 
@@ -260,17 +268,17 @@ function result_page() {
     const result_description = document.querySelector(".result__description");
     console.log(result_description);
 
-    /*for (let i=0; descriptionArray.length; i++){
+    for (let i=0; descriptionArray.length; i++){
         if (sentence.innerHTML==descriptionArray[i].key){
             result_description.innerHTML = descriptionArray[i].description;
             break;
         }
-    } */ //key랑 i랑 같으면 i를 다른 변수로 빼고 그 변수를 descriptionArray에 넣자.
+    } //key랑 i랑 같으면 i를 다른 변수로 빼고 그 변수를 descriptionArray에 넣자.
 
-    for (let v in descriptionArray){
-        if (v==description_key) {
+    /*for (let v in descriptionArray){
+        if (v==description.key) {
             result_description.innerHTML = descriptionArray.description;
             break;
         }
-    }
+    }*/
 }
