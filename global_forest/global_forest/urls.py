@@ -20,4 +20,5 @@ import pages.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', pages.views.ResultCreateView.as_view(), name='home'),
+    path('result/', pages.views.result, name="result"),
 ]
