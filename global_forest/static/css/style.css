@@ -16,6 +16,7 @@
     --color-text-light: #94987E;
     --color-text-medium: #7E593E;
 
+
     /* Font Size */
     --font-large: 22px;
     --font-medium: 20px;  /* 질문 */
@@ -71,6 +72,7 @@ p {
 
 a {
     text-decoration: none;
+    color: var(--color-text);
 }
 
 input {
@@ -89,7 +91,7 @@ input {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top, bottom, left, right;
-    display: block;
+    display: none;
     text-align: center;
     height: 180vw;
     position: relative;
@@ -117,7 +119,6 @@ input {
     display: flex;
     justify-content: center;
     position: relative;
-    transform: translateY(300%);
 }
 
 .intro__footer__img {
@@ -343,15 +344,12 @@ input {
 /* question1 */
 
 #question1 {
-    display: none;
+    display: block;
     text-align: center;
     height: 180vw;
     position: relative;
 }
 
-.question1__img {
-    width: 30px;
-}
 
 .question1__progressBar {
     display: inline-block;
@@ -643,6 +641,7 @@ input {
 
 .result__tag {
     margin-bottom: 10px;
+    margin-left: 5px;
 }
 
 .result__sns {
@@ -686,5 +685,103 @@ input {
 }
 
 @media screen and (min-width: 768px) {
-    
+    html {
+        margin: 0 200px;
+    }
+
+    input {
+        width: 250px;
+    }
+
+    #intro {
+        background: url(temp/top.png), url(temp/bottom.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top, bottom;
+        height: 100vh;
+    }
+
+    #opening, #onboard, #onboard1, #onboard1_1, #onboard1_2,
+    #onboard1_3, #question1, #question2, #question3, #question4,
+    #question5, #question6, #loading, #result {
+        height: 100vh;
+    }
+
+    .opening__img {
+        width: 300px;
+    }
+
+    .onboard__btn {
+        width: 250px;
+    }
+
+    .onboard1__a__1, .onboard1__a__2, .onboard1__a__3 {
+        width: 250px;
+    }
+
+    #onboard1_1 {
+        text-align: center;
+    }
+
+    .onboard1_1__btn {
+        width: 250px;
+    }
+
+    .onboard1_2__img {
+        width: 300px;
+    }
+
+    .onboard1_3__img {
+        width: 300px;
+    }
+
+    .question1__progressBar, .question2__progressBar,
+    .question3__progressBar, .question4__progressBar,
+    .question5__progressBar, .question6__progressBar {
+        width: 450px;        
+    }
+
+    .question1__a, .question2__a, .question3__a,
+    .question4__a, .question5__a, .question6__a {
+        margin: auto;
+        width: 450px;
+    }
+
+    .question1__a__1, .question1__a__2, .question1__a__3, .question1__a__4 {
+        width: 250px;
+    }
+
+    .question2__a__1, .question2__a__2, .question2__a__3, .question2__a__4, .question2__a__5 {
+        width: 250px;
+    }
+
+    .question3__a__1, .question3__a__2, .question3__a__3, .question3__a__4, .question3__a__5 {
+        width: 250px;
+    }
+
+    .question4__a__1, .question4__a__2, .question4__a__3, .question4__a__4 {
+        width: 250px;
+    }
+
+    .question5__a__1, .question5__a__2, .question5__a__3, .question5__a__4 {
+        width: 250px;
+    }
+
+    .question6__a__1, .question6__a__2, .question6__a__3, .question6__a__4 {
+        width: 250px;
+    }
+
+    .result__container {
+        margin: auto;
+        width: 450px;
+    }
+
+    .result__img {
+        width: 300px;
+    }
+
+    .result__discord, .result__retry {
+        width: 250px;
+    }
+
 }
