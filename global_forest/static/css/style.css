@@ -81,7 +81,6 @@ input {
 /* intro */
 
 #intro {
-    background: url(temp/top.png), url(temp/bottom.png), url(temp/left.png), url(temp/right.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top, bottom, left, right;
