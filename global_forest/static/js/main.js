@@ -306,8 +306,9 @@ function next15(tag) {
     loading_func();
 }
 
+let idx = 0;
+
 function changeImgs() {
-    let idx = 0;
     const imgs = document.getElementsByClassName("loading__img");  // "loading__img"는 html에 나중에 class 이름 추가  
     for (let i = 0; i < imgs.length; i++) {
         imgs[i].style.display = "none";
@@ -318,12 +319,12 @@ function changeImgs() {
         idx = 1;
     }
     imgs[idx-1].style.display = "block";
-    setTimeout(changeImgs, 100);
+    setTimeout(changeImgs, 150);
 }
 
-/*window.onload = function() {
+window.onload = function() {
     changeImgs();
-}*/
+}
 
 function loading_func() {
     console.log("함수 호출");

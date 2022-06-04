@@ -86,14 +86,15 @@ input {
 }
 
 /* intro */
+
 #intro {
-    background-image: url("../img/top.png"), url("../img/right.png"), url("../img/bottom.png"),url("../img/left.png");
+    background: url("../img/top.png"), url("../img/bottom.png"), url("../img/left.png"), url("../img/right.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top, bottom, left, right;
     display: block;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -136,7 +137,7 @@ input {
 #opening {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -168,7 +169,7 @@ input {
 #onboard {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -186,7 +187,12 @@ input {
     align-items: center;
 }
 
+.onboard__content {
+    margin-bottom: 30px;
+}
+
 .onbard__content__small {
+    margin-bottom: 30px;
     margin-left: 5px;
     font-size: var(--font-small);
     color: var(--color-text-light);
@@ -200,6 +206,7 @@ input {
 .onboard__btn {
     width: 40vw;
     height: 50px;
+    margin-top: 30px;
 }
 
 /* onboard1 */
@@ -207,7 +214,7 @@ input {
 #onboard1 {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -244,7 +251,7 @@ input {
 
 #onboard1_1 {
     display: none;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -271,6 +278,10 @@ input {
     margin-bottom: 30px;
 }
 
+.onboard1_1__major__text {
+    margin-top: 30px;
+}
+
 .onboard1_1__major__subtext {
     font-size: var(--font-small);
     color: var(--color-text-medium);
@@ -285,6 +296,7 @@ input {
     width: 80vw;
     height: 50px;
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 /* onboard1_2 */
@@ -292,7 +304,7 @@ input {
 #onboard1_2 {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -319,7 +331,7 @@ input {
 #onboard1_3 {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -346,7 +358,7 @@ input {
 #question1 {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -359,12 +371,20 @@ input {
     border: 1px solid var(--color-button);
     margin-top: 50px;
     margin-bottom: 50px;
+    position: relative;
 }
 
 #question1 .progressBar {
     height: 10px;
     width: calc(100/6*1%);
     background-color: var(--color-button);
+}
+
+#question1 .progressBar_img {
+    transform: translate(-60%, -60%);
+    left: calc(100/6*1%);
+    position: absolute;
+    width: 30px;
 }
 
 .question1__q {
@@ -382,7 +402,7 @@ input {
 #question2 {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -394,12 +414,20 @@ input {
     border: 1px solid var(--color-button);
     margin-top: 50px;
     margin-bottom: 50px;
+    position: relative;
 }
 
 #question2 .progressBar {
     height: 10px;
     width: calc(100/6*2%);
     background-color: var(--color-button);
+}
+
+#question2 .progressBar_img {
+    transform: translate(-60%, -60%);
+    left: calc(100/6*2%);
+    position: absolute;
+    width: 30px;
 }
 
 .question2__img {
@@ -422,7 +450,7 @@ input {
 #question3 {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -434,12 +462,20 @@ input {
     border: 1px solid var(--color-button);
     margin-top: 50px;
     margin-bottom: 50px;
+    position: relative;
 }
 
 #question3 .progressBar {
     height: 10px;
     width: calc(100/6*3%);
     background-color: var(--color-button);
+}
+
+#question3 .progressBar_img {
+    transform: translate(-60%, -60%);
+    left: calc(100/6*3%);
+    position: absolute;
+    width: 30px;
 }
 
 .question3__img {
@@ -468,7 +504,7 @@ input {
 #question4 {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -480,12 +516,20 @@ input {
     border: 1px solid var(--color-button);
     margin-top: 50px;
     margin-bottom: 50px;
+    position: relative;
 }
 
 #question4 .progressBar {
     height: 10px;
     width: calc(100/6*4%);
     background-color: var(--color-button);
+}
+
+#question4 .progressBar_img {
+    transform: translate(-60%, -60%);
+    left: calc(100/6*4%);
+    position: absolute;
+    width: 30px;
 }
 
 .question4__img {
@@ -514,7 +558,7 @@ input {
 #question5 {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -526,17 +570,20 @@ input {
     border: 1px solid var(--color-button);
     margin-top: 50px;
     margin-bottom: 50px;
-}
-
-.question5__img {
-    width: 40px;
-    top: -20px;
+    position: relative;
 }
 
 #question5 .progressBar {
     height: 10px;
     width: calc(100/6*5%);
     background-color: var(--color-button);
+}
+
+#question5 .progressBar_img {
+    transform: translate(-60%, -60%);
+    left: calc(100/6*5%);
+    position: absolute;
+    width: 30px;
 }
 
 .question5__q {
@@ -554,7 +601,7 @@ input {
 #question6 {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -566,17 +613,20 @@ input {
     border: 1px solid var(--color-button);
     margin-top: 50px;
     margin-bottom: 50px;
-}
-
-.question6__img {
-    width: 40px;
-    top: -20px;
+    position: relative;
 }
 
 #question6 .progressBar {
     height: 10px;
     width: calc(100/6*6%);
     background-color: var(--color-button);
+}
+
+#question6 .progressBar_img {
+    transform: translate(-60%, -60%);
+    left: calc(100/6*6%);
+    position: absolute;
+    width: 30px;
 }
 
 .question6__q {
@@ -588,8 +638,6 @@ input {
     height: 50px;
     margin-bottom: 10px;
 }
-
-
 
 /* loading */
 
@@ -608,6 +656,11 @@ input {
     transform: translate(-50%, -50%);
 }
 
+.loading__img {
+    margin-top: 30px;
+    width: 80vw;
+}
+
 /* result */
 
 #result {
@@ -621,7 +674,7 @@ input {
 }
 
 .result__content {
-    margin-bottom: 20px;
+    margin: 50px 0;
 }
 
 .result__img {
@@ -631,7 +684,7 @@ input {
     background-color: var(--color-button);
 }
 
-.result__animal {
+.result__sentence {
     padding: 10px;
     font-family: 'yg-jalnan';
 }
@@ -641,9 +694,10 @@ input {
     margin-bottom: 30px;
 }
 
-.result__tag {
+.result__tag_1, .result__tag__2, .result__tag__3 {
     margin-bottom: 10px;
     margin-left: 5px;
+    height: 20px;
 }
 
 .result__sns {
@@ -651,6 +705,16 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.result__btn {
+    height: 50px;
+    width: 250px;
+}
+
+.result__thanks {
+    text-align: center;
+    margin: 50px 0;
 }
 
 .result__discord {
@@ -663,16 +727,6 @@ input {
     width: 80vw;
     height: 50px;
     margin-bottom: 10px;
-}
-
-.result__btn {
-    width: 80vw;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-#result__data {
-    display: none;
 }
 
 /* animation */
@@ -706,7 +760,7 @@ input {
     }
 
     #intro {
-        background: url(temp/top.png), url(temp/bottom.png);
+        background: url("../img/top.png"), url("../img/bottom.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top, bottom;
@@ -783,9 +837,18 @@ input {
         width: 250px;
     }
 
+    .loading__img {
+        width: 300px;
+    }
+
     .result__container {
         margin: auto;
         width: 450px;
+    }
+
+    .result__thanks {
+        text-align: center;
+        margin: 50px 0;
     }
 
     .result__img {
@@ -793,7 +856,7 @@ input {
     }
 
     .result__discord, .result__retry {
-        width: 250px;
+        width: 400px;
     }
 
 }
