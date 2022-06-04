@@ -86,7 +86,7 @@ input {
 }
 
 /* intro */
-
+/*
 #intro {
     background-size: contain;
     background-repeat: no-repeat;
@@ -95,7 +95,7 @@ input {
     text-align: center;
     height: 180vw;
     position: relative;
-}
+}*/
 
 .intro__container {
     margin: auto;
