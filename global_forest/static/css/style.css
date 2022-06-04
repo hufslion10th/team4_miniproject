@@ -50,6 +50,11 @@ button {
     cursor: pointer;
 }
 
+button:active {
+    background-color: #eefcb3;
+    border: 1px solid #c3e33d;
+}
+
 h1 {
     font-size: var(--font-medium);
     font-weight: var(--weight-bold);
@@ -79,8 +84,8 @@ input {
 }
 
 /* intro */
-/*
 #intro {
+    background-image: url("../img/top.png"), url("../img/right.png"), url("../img/top.png"),url("../img/left.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top, bottom, left, right;
@@ -88,7 +93,7 @@ input {
     text-align: center;
     height: 180vw;
     position: relative;
-}*/
+}
 
 .intro__container {
     margin: auto;
