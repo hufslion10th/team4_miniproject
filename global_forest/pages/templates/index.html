@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모여봐요! 모현의 숲</title>
+    <title>놀러와요! 모현의 숲</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="{% static 'js/main.js' %}" defer></script>
 </head>
@@ -19,10 +19,10 @@
                 <img src="{% static 'img/logo.png' %}" alt="logo" class="intro__logo">
                 <p class="intro__content">모현의 숲에서 나는 어떤 동물일까?</p>
                 <button class="intro__btn" type="button" onclick="js:next1()">테스트 시작하기</button>
-                <div class="intro__footer">
-                    <img src="{% static 'img/hufs.png' %}" alt="" class="intro__footer__img">
-                    <p class="intro__footer__p">한국외대 글로벌캠퍼스</p>
-                </div>
+            </div>
+            <div class="intro__footer">
+                <img src="{% static 'img/hufs.png' %}" alt="" class="intro__footer__img">
+                <p class="intro__footer__p">한국외대 글로벌캠퍼스</p>
             </div>
         </section>
 
@@ -30,7 +30,7 @@
         <section id="opening">
             <div class="opening__container">
                 <p class="opening__content">
-                    어느날, 정신을 차려보니 한국외대 글로벌캠퍼스에 도착해있는 당신
+                    어느날, 정신을 차려보니 <br> 한국외대 글로벌캠퍼스에 도착해있는 당신
                 </p>
                 <img src="{% static 'img/cherryblossom.png' %}" alt="" class="opening__img">
                 <p class="opening__content">
@@ -115,16 +115,18 @@
                 <div class="progressBar"></div>
                 <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
-            <p class="question1__q">
-                모현의 숲에 입장한 당신<br>
-                멀리서 동물이 걸어온다.
-                <br>이 동물은?
-            </p>
-            <div class="question1__a">
-                <button class="question1__a__1" type="button" onclick="js:next10('부엉이')">부엉이</button>
-                <button class="question1__a__2" type="button" onclick="js:next10('고양이')">고양이</button>
-                <button class="question1__a__3" type="button" onclick="js:next10('너구리')">너구리</button>
-                <button class="question1__a__4" type="button" onclick="js:next10('아기사슴')">아기사슴</button>
+            <div class="question1__container">
+                <p class="question1__q">
+                    모현의 숲에 입장한 당신<br>
+                    멀리서 동물이 걸어온다.
+                    <br>이 동물은?
+                </p>
+                <div class="question1__a">
+                    <button class="question1__a__1" type="button" onclick="js:next10('부엉이')">부엉이</button>
+                    <button class="question1__a__2" type="button" onclick="js:next10('고양이')">고양이</button>
+                    <button class="question1__a__3" type="button" onclick="js:next10('너구리')">너구리</button>
+                    <button class="question1__a__4" type="button" onclick="js:next10('아기사슴')">아기사슴</button>
+                </div>
             </div>
         </section>
 
@@ -134,15 +136,17 @@
                 <div class="progressBar"></div>
                 <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
-            <p class="question2__q">
-                정신차려보니 여기가 어딘지 모르겠다.<br>
-                주변을 살펴보자, 뭐가 있지?
-            </p>
-            <div class="question2__a">
-                <button class="question2__a__1" type="button" onclick="js:next11('아시아')">반짝이는 바다가 보인다</button>
-                <button class="question2__a__2" type="button" onclick="js:next11('유럽')">하늘로 높게 뻗은 나무가 있다</button>
-                <button class="question2__a__3" type="button" onclick="js:next11('아메리카')">축제가 한창이다</button>
-                <button class="question2__a__4" type="button" onclick="js:next11('아프리카')">사막에 오아시스가 보인다</button>
+            <div class="question2__container">
+                <p class="question2__q">
+                    정신차려보니 여기가 어딘지 모르겠다.<br>
+                    주변을 살펴보자, 뭐가 있지?
+                </p>
+                <div class="question2__a">
+                    <button class="question2__a__1" type="button" onclick="js:next11('아시아')">반짝이는 바다가 보인다</button>
+                    <button class="question2__a__2" type="button" onclick="js:next11('유럽')">하늘로 높게 뻗은 나무가 있다</button>
+                    <button class="question2__a__3" type="button" onclick="js:next11('아메리카')">축제가 한창이다</button>
+                    <button class="question2__a__4" type="button" onclick="js:next11('아프리카')">사막에 오아시스가 보인다</button>
+                </div>
             </div>
         </section>
 
@@ -152,16 +156,18 @@
                 <div class="progressBar"></div>
                 <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
-            <p class="question3__q">
-                여기서 지내보기로 했다.<br>
-                당신이 지낼 장소는?
-            </p>
-            <div class="question3__a">
-                <button class="question3__a__1" type="button" onclick="js:next12('비온뒤땅냄새를좋아하는')">폭신한 땅속 단칸방</button>
-                <button class="question3__a__2" type="button" onclick="js:next12('집앞낚시금지')">고요한 호숫가 옆 움막</button>
-                <button class="question3__a__3" type="button" onclick="js:next12('집을사랑하는')">산 속 어둑한 동굴</button>
-                <button class="question3__a__4" type="button" onclick="js:next12('마치타잔')">나무꼭대기 오두막집</button>
-                <button class="question3__a__5" type="button" onclick="js:next12('blackmamba')">광야</button>
+            <div class="question3__container">
+                <p class="question3__q">
+                    여기서 지내보기로 했다.<br>
+                    당신이 지낼 장소는?
+                </p>
+                <div class="question3__a">
+                    <button class="question3__a__1" type="button" onclick="js:next12('비온뒤땅냄새를좋아하는')">폭신한 땅속 단칸방</button>
+                    <button class="question3__a__2" type="button" onclick="js:next12('집앞낚시금지')">고요한 호숫가 옆 움막</button>
+                    <button class="question3__a__3" type="button" onclick="js:next12('집을사랑하는')">산 속 어둑한 동굴</button>
+                    <button class="question3__a__4" type="button" onclick="js:next12('마치타잔')">나무꼭대기 오두막집</button>
+                    <button class="question3__a__5" type="button" onclick="js:next12('blackmamba')">광야</button>
+                </div>
             </div>
         </section>
 
@@ -171,15 +177,17 @@
                 <div class="progressBar"></div>
                 <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
-            <p class="question4__q">
-                이사 기념 집들이다!
-                <br>동물 친구들과 어떤 음식을 먹을까?
-            </p>
-            <div class="question4__a">
-                <button class="question4__a__1" type="button" onclick="js:next13('치맥')">치킨과 맥주</button>
-                <button class="question4__a__2" type="button" onclick="js:next13('술찌')">아메리카노와 크로플</button>
-                <button class="question4__a__3" type="button" onclick="js:next13('멋사')">삼겹살에 소주</button>
-                <button class="question4__a__4" type="button"onclick="js:next13('FLEX')">스테이크와 와인</button>
+            <div class="question4__container">
+                <p class="question4__q">
+                    이사 기념 집들이다!
+                    <br>동물 친구들과 어떤 음식을 먹을까?
+                </p>
+                <div class="question4__a">
+                    <button class="question4__a__1" type="button" onclick="js:next13('치맥')">치킨과 맥주</button>
+                    <button class="question4__a__2" type="button" onclick="js:next13('술찌')">아메리카노와 크로플</button>
+                    <button class="question4__a__3" type="button" onclick="js:next13('멋사')">삼겹살에 소주</button>
+                    <button class="question4__a__4" type="button"onclick="js:next13('FLEX')">스테이크와 와인</button>
+                </div>
             </div>
         </section>
 
@@ -189,15 +197,17 @@
                 <div class="progressBar"></div>
                 <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
-            <p class="question5__q">
-                이곳에서 일주일이 지났다. 
-                <br>모현의 숲에서 당신의 일상 모습은?
-            </p>
-            <div class="question5__a">
-                <button class="question5__a__1" type="button" onclick="js:next14('예술가')">sns에 일상을 기록한다</button>
-                <button class="question5__a__2" type="button" onclick="js:next14('개발자')">밤새도록 컴퓨터 게임을 한다</button>
-                <button class="question5__a__3" type="button" onclick="js:next14('요리사')">친구들을 위해 요리한다</button>
-                <button class="question5__a__4" type="button" onclick="js:next14('마법사')">판타지 영화를 본다</button>
+            <div class="question5__container">
+                <p class="question5__q">
+                    이곳에서 일주일이 지났다. 
+                    <br>모현의 숲에서 당신의 일상 모습은?
+                </p>
+                <div class="question5__a">
+                    <button class="question5__a__1" type="button" onclick="js:next14('예술가')">sns에 일상을 기록한다</button>
+                    <button class="question5__a__2" type="button" onclick="js:next14('개발자')">밤새도록 컴퓨터 게임을 한다</button>
+                    <button class="question5__a__3" type="button" onclick="js:next14('요리사')">친구들을 위해 요리한다</button>
+                    <button class="question5__a__4" type="button" onclick="js:next14('마법사')">판타지 영화를 본다</button>
+                </div>
             </div>
         </section>
 
@@ -207,15 +217,17 @@
                 <div class="progressBar"></div>
                 <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
-            <p class="question6__q">
-                오늘도 뿌듯한 하루였다. 
-                <br>하루를 끝마치며 잠든 나의 모습은?
-            </p>
-            <div class="question6__a">
-                <button class="question6__a__1" type="button" onclick="js:next15('잠만보')">눕자마자 잠이 든다</button>
-                <button class="question6__a__2" type="button" onclick="js:next15('새우잠')">옆으로 누워잔다</button>
-                <button class="question6__a__3" type="button" onclick="js:next15('이불도둑')">이불을 끌어안고 잔다</button>
-                <button class="question6__a__4" type="button" onclick="js:next15('코골이')">잠버릇이 고약하다</button>
+            <div class="question6__container">
+                <p class="question6__q">
+                    오늘도 뿌듯한 하루였다. 
+                    <br>하루를 끝마치며 잠든 나의 모습은?
+                </p>
+                <div class="question6__a">
+                    <button class="question6__a__1" type="button" onclick="js:next15('잠만보')">눕자마자 잠이 든다</button>
+                    <button class="question6__a__2" type="button" onclick="js:next15('새우잠')">옆으로 누워잔다</button>
+                    <button class="question6__a__3" type="button" onclick="js:next15('이불도둑')">이불을 끌어안고 잔다</button>
+                    <button class="question6__a__4" type="button" onclick="js:next15('코골이')">잠버릇이 고약하다</button>
+                </div>
             </div>
         </section>
 
@@ -234,8 +246,7 @@
         <section id="result">
             <div class="result__container">
                 <p class="result__content">{{nickname}}님, 모현의 숲에서 당신은</p>
-                <!-- <img src="" alt="" class="result__img"> -->
-                <div class="result__img"></div>
+                <!-- <div class="result__background"></div> -->
                 <h1 class="result__sentence"></h1>
                 <p class="result__description"></p>
                 <button class="result__tag_1">tag</button>
