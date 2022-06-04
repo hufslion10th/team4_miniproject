@@ -4,4 +4,4 @@ from .models import Result
 class ResultModelForm(forms.ModelForm):
     class Meta:
         model = Result
-        fields = '__all__'
+        fields = ['nickname', 'student_number', 'major']

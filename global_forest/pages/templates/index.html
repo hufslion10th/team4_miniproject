@@ -1,4 +1,4 @@
-<!-- {% load static %} -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,126 +6,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모여봐요! 모현의 숲</title>
-    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script src="{% static 'js/main.js' %}" defer></script> -->
-    <link rel="stylesheet" href="temp.css">
-    <script src="temp.js" defer></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/main.js' %}" defer></script>
 </head>
+
 <body>
     <!-- intro -->
-    <section id="intro">
-        <div class="intro__container">
-            <img src="temp/logo.png" alt="logo" class="intro__logo">
-            <p class="intro__content">모현의 숲에서 나는 어떤 동물일까?</p>
-            <button class="intro__btn">테스트 시작하기</button>
-            <div class="intro__footer">
-                <img src="temp/hufs.png" alt="" class="intro__footer__img">
-                <p class="intro__footer__p">한국외대 글로벌캠퍼스</p>
+    <form method="POST">
+        {% csrf_token %}
+        <section id="intro">
+            <div class="intro__container">
+                <img src="{% static 'img/logo.png' %}" alt="logo" class="intro__logo">
+                <p class="intro__content">모현의 숲에서 나는 어떤 동물일까?</p>
+                <button class="intro__btn" type="button" onclick="js:next1()">테스트 시작하기</button>
+                <div class="intro__footer">
+                    <img src="{% static 'img/hufs.png' %}" alt="" class="intro__footer__img">
+                    <p class="intro__footer__p">한국외대 글로벌캠퍼스</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- opening -->
-    <section id="opening">
-        <div class="opening__container">
-            <p class="opening__content">
-                어느날, 정신을 차려보니 한국외대 글로벌캠퍼스에 도착해있는 당신
-            </p>
-            <img src="temp/cherryblossom.png" alt="" class="opening__img">
-            <p class="opening__content">
-                용인시 모현, 산으로 둘러쌓여<br>
-                "모현의 숲"이라고도 불리는 외대 글캠,<br>
-                나는 이곳에서 어떤 마법의 동물일까?
-            </p>
-            <button class="opening__btn">Next ></button>
-        </div>
-    </section>
-
-    <!-- onboard -->
-    <section id="onboard">
-        <div class="onboard__container">
-            <div class="p__container">
-                <p class="onboard__content">
-                    당신의 이름은? 
+        <!-- opening -->
+        <section id="opening">
+            <div class="opening__container">
+                <p class="opening__content">
+                    어느날, 정신을 차려보니 한국외대 글로벌캠퍼스에 도착해있는 당신
                 </p>
-                <p class="onbard__content__small">(닉네임)</p>
+                <img src="{% static 'img/cherryblossom.png' %}" alt="" class="opening__img">
+                <p class="opening__content">
+                    용인시 모현, 산으로 둘러쌓여<br>
+                    "모현의 숲"이라고도 불리는 외대 글캠,<br>
+                    나는 이곳에서 어떤 마법의 동물일까?
+                </p>
+                <button class="opening__btn" type="button" onclick="js:next2()">Next ></button>
             </div>
-            <!-- <input type="text" class="onboard__name"> -->
-            <form action="" method="POST">
-                {% csrf_token %}
-                <table>
-                    {{ result.nickname }}
-                </table>
-                <button class="onboard__btn">Enter</button>
-            </form>
-            <!-- <button class="onboard__btn">Enter</button> -->
-        </div>
-    </section>
+        </section>
 
-    <!-- onboard1 -->
-    <section id="onboard1">
-        <div class="onboard1__container">
-            <p class="onboard1__q">
-                반가워요!<br>
-                여기는 어떻게 오셨나요?
-            </p>
-            <div class="onboard1__a">
-                <button class="onboard1__a__1">외대생입니다</button>
-                <button class="onboard1__a__2">예비 외대생입니다</button>
-                <button class="onboard1__a__3">놀러왔어요</button>
+        <!-- onboard -->
+        <section id="onboard">
+            <div class="onboard__container">
+                <div class="p__container">
+                    <p class="onboard__content">
+                        당신의 이름은?
+                    </p>
+                    <p class="onbard__content__small">(닉네임)</p>
+                </div>
+                <!-- <input type="text" class="onboard__name"> -->
+                {{ form.nickname }}
+                <button class="onboard__btn" type="button" onclick="js:next3()">Enter</button>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- onboard1_1 -->
-    <section id="onboard1_1">
-        <div class="onboard1_1__container">
-            <p class="onboard1_1__content">외붕이셨군요! 자기소개 부탁드려요</p>
-            <div class="onboard1_1__num">
-                <p class="onboard1_1__num__text">학번을 입력해주세요</p>
-                <p class="onboard1_1__num__subtext">숫자만 입력해주세요 (예: 18)</p>
-                <!-- <input type="text" class="onboard1_1__num__input"> -->
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    <table>
-                        {{ result.student_number }}
-                    </table>
-                </form>
+        <!-- onboard1 -->
+        <section id="onboard1">
+            <div class="onboard1__container">
+                <p class="onboard1__q">
+                    반가워요!<br>
+                    여기는 어떻게 오셨나요?
+                </p>
+                <div class="onboard1__a">
+                    <button class="onboard1__a__1" type="button" onclick="js:next4()">외대생입니다</button>
+                    <button class="onboard1__a__2" type="button" onclick="js:next5()">예비 외대생입니다</button>
+                    <button class="onboard1__a__3" type="button" onclick="js:next6()">놀러왔어요</button>
+                </div>
             </div>
-            <div class="onboard1_1__major">
-                <p class="onboard1_1__major__text">학과</p>
-                <p class="onboard1_1__major__subtext">띄어쓰기 없이 입력해주세요 (예: 컴퓨터공학과)</p>
-                <!-- <input type="text" class="onboard1_1__major__input"> -->
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    <table>
-                        {{ result.major }}
-                    </table>
-                </form>
+        </section>
+
+        <!-- onboard1_1 -->
+        <section id="onboard1_1">
+            <div class="onboard1_1__container">
+                <p class="onboard1_1__content">외붕이셨군요! 자기소개 부탁드려요</p>
+                <div class="onboard1_1__num">
+                    <p class="onboard1_1__num__text">학번을 입력해주세요</p>
+                    <p class="onboard1_1__num__subtext">숫자만 입력해주세요 (예: 18)</p>
+                    {{ form.student_number }}
+                </div>
+                <div class="onboard1_1__major">
+                    <p class="onboard1_1__major__text">학과</p>
+                    <p class="onboard1_1__major__subtext">띄어쓰기 없이 입력해주세요 (예: 컴퓨터공학과)</p>
+                    <!-- <input type="text" class="onboard1_1__major__input"> -->
+                    {{ form.major }}
+                </div>
+                <button class="onboard1_1__btn" type="button" onclick="js:next7()">모현의 숲 입장!</button>
             </div>
-            <button class="onboard1_1__btn">모현의 숲 입장!</button>
-        </div>
-    </section>
+        </section>
 
-    <!-- onboard1_2 -->
-    <section id="onboard1_2">
-        <p class="onboard1_2__content">예비 샌애기로군요! "모현의 숲"에 오신걸 환영합니다</p>
-        <img src="" alt="" class="onboard1_2__img">
-        <button class="onboard1_1__btn">모현의 숲 입장!</button>
-    </section>
+        <!-- onboard1_2 -->
+        <section id="onboard1_2">
+            <div class="onboard1_2__container">
+                <p class="onboard1_2__content">예비 샌애기로군요! <br> "모현의 숲"에 오신걸 환영합니다</p>
+                <img src="{% static 'img/cherryblossom.png' %}" alt="" class="onboard1_2__img">
+                <button class="onboard1_1__btn" type="button" onclick="js:next8()">모현의 숲 입장!</button>
+            </div>
+        </section>
 
-    <!-- onboard1_3 -->
-    <section id="onboard1_3">
-        <p class="onboard1_3__content">"모현의 숲"은 처음이겠군요! 환영합니다</p>
-        <img src="" alt="" class="onboard1_3__img">
-        <button class="onboard1_1__btn">모현의 숲 입장!</button>
-    </section>
+        <!-- onboard1_3 -->
+        <section id="onboard1_3">
+            <div class="onboard1_3__container">
+                <p class="onboard1_3__content">"모현의 숲"은 처음이겠군요! <br> 환영합니다</p>
+                <img src="{% static 'img/cherryblossom.png' %}" alt="" class="onboard1_3__img">
+                <button class="onboard1_1__btn" type="button" onclick="js:next9()">모현의 숲 입장!</button>
+            </div>
+        </section>
 
-    <!-- question1 -->
-    <section id="question1">
-        <div class="question1__container">
+        <!-- question1 -->
+        <section id="question1">
             <div class="question1__progressBar">
-                <div class="question1__now"></div>
+                <div class="progressBar"></div>
+                <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
             <p class="question1__q">
                 모현의 숲에 입장한 당신<br>
@@ -133,133 +121,138 @@
                 <br>이 동물은?
             </p>
             <div class="question1__a">
-                <button class="question1__a__1" onclick="js:start()">부엉이</button>
-                <button class="question1__a__2" onclick="js:start()">고양이</button>
-                <button class="question1__a__3" onclick="js:start()">너구리</button>
-                <button class="question1__a__4" onclick="js:start()">아기사슴</button>
+                <button class="question1__a__1" type="button" onclick="js:next10('부엉이')">부엉이</button>
+                <button class="question1__a__2" type="button" onclick="js:next10('고양이')">고양이</button>
+                <button class="question1__a__3" type="button" onclick="js:next10('너구리')">너구리</button>
+                <button class="question1__a__4" type="button" onclick="js:next10('아기사슴')">아기사슴</button>
             </div>
-        </div>  
-    </section>
+        </section>
 
-    <!-- question2 -->
-    <section id="question2">
-        <div class="question2__container">
+        <!-- question2 -->
+        <section id="question2">
             <div class="question2__progressBar">
-                <div class="question2__now"></div>
-                <img src="temp/progress bar.png" alt="" class="question2__img">
+                <div class="progressBar"></div>
+                <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
             <p class="question2__q">
                 정신차려보니 여기가 어딘지 모르겠다.<br>
                 주변을 살펴보자, 뭐가 있지?
             </p>
             <div class="question2__a">
-                <button class="question2__a__1">저 멀리서 음악 소리가 들린다</button>
-                <button class="question2__a__2">반짝이는 바다가 보인다</button>
-                <button class="question2__a__3">하늘로 높게 뻗은 나무가 있다</button>
-                <button class="question2__a__4">축제가 한창이다</button>
-                <button class="question2__a__5">사막에 오아시스가 보인다</button>
+                <button class="question2__a__1" type="button" onclick="js:next11('아시아')">반짝이는 바다가 보인다</button>
+                <button class="question2__a__2" type="button" onclick="js:next11('유럽')">하늘로 높게 뻗은 나무가 있다</button>
+                <button class="question2__a__3" type="button" onclick="js:next11('아메리카')">축제가 한창이다</button>
+                <button class="question2__a__4" type="button" onclick="js:next11('아프리카')">사막에 오아시스가 보인다</button>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- question3 -->
-    <section id="question3">
-        <div class="question3__container">
+        <!-- question3 -->
+        <section id="question3">
             <div class="question3__progressBar">
-                <div class="question3__now"></div>
+                <div class="progressBar"></div>
+                <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
             <p class="question3__q">
                 여기서 지내보기로 했다.<br>
                 당신이 지낼 장소는?
             </p>
             <div class="question3__a">
-                <button class="question3__a__1">폭신한 땅속 단칸방</button>
-                <button class="question3__a__2">고요한 호숫가 옆 움막</button>
-                <button class="question3__a__3">산 속 어둑한 동굴</button>
-                <button class="question3__a__4">나무꼭대기 오두막집</button>
-                <button class="question3__a__5">광야</button>
+                <button class="question3__a__1" type="button" onclick="js:next12('비온뒤땅냄새를좋아하는')">폭신한 땅속 단칸방</button>
+                <button class="question3__a__2" type="button" onclick="js:next12('집앞낚시금지')">고요한 호숫가 옆 움막</button>
+                <button class="question3__a__3" type="button" onclick="js:next12('집을사랑하는')">산 속 어둑한 동굴</button>
+                <button class="question3__a__4" type="button" onclick="js:next12('마치타잔')">나무꼭대기 오두막집</button>
+                <button class="question3__a__5" type="button" onclick="js:next12('blackmamba')">광야</button>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- question4 -->
-    <section id="question4">
-        <div class="question4__container">
+        <!-- question4 -->
+        <section id="question4">
             <div class="question4__progressBar">
-                <div class="question4__now"></div>
+                <div class="progressBar"></div>
+                <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
             <p class="question4__q">
                 이사 기념 집들이다!
                 <br>동물 친구들과 어떤 음식을 먹을까?
             </p>
             <div class="question4__a">
-                <button class="question4__a__1">치킨과 맥주</button>
-                <button class="question4__a__2">아메리카노와 크로플</button>
-                <button class="question4__a__3">삼겹살에 소주</button>
-                <button class="question4__a__4">스테이크와 와인</button>
+                <button class="question4__a__1" type="button" onclick="js:next13('치맥')">치킨과 맥주</button>
+                <button class="question4__a__2" type="button" onclick="js:next13('술찌')">아메리카노와 크로플</button>
+                <button class="question4__a__3" type="button" onclick="js:next13('멋사')">삼겹살에 소주</button>
+                <button class="question4__a__4" type="button"onclick="js:next13('FLEX')">스테이크와 와인</button>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- question5 -->
-    <section id="question5">
-        <div class="question5__container">
+        <!-- question5 -->
+        <section id="question5">
             <div class="question5__progressBar">
-                <div class="question5__now"></div>
+                <div class="progressBar"></div>
+                <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
             <p class="question5__q">
-                이곳에서 일주일이 지났다. 모현의 숲에서 당신의 일상 모습은?
+                이곳에서 일주일이 지났다. 
+                <br>모현의 숲에서 당신의 일상 모습은?
             </p>
             <div class="question5__a">
-                <button class="question5__a__1">sns에 일상을 기록한다</button>
-                <button class="question5__a__2">밤새도록 컴퓨터 게임을 한다</button>
-                <button class="question5__a__3">친구들을 위해 요리한다</button>
-                <button class="question5__a__4">판타지 영화를 본다</button>
+                <button class="question5__a__1" type="button" onclick="js:next14('예술가')">sns에 일상을 기록한다</button>
+                <button class="question5__a__2" type="button" onclick="js:next14('개발자')">밤새도록 컴퓨터 게임을 한다</button>
+                <button class="question5__a__3" type="button" onclick="js:next14('요리사')">친구들을 위해 요리한다</button>
+                <button class="question5__a__4" type="button" onclick="js:next14('마법사')">판타지 영화를 본다</button>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- question6 -->
-    <section id="question6">
-        <div class="question6__container">
+        <!-- question6 -->
+        <section id="question6">
             <div class="question6__progressBar">
-                <div class="question6__now"></div>
+                <div class="progressBar"></div>
+                <img src="{% static 'img/progressBar.png' %}" alt="" class="progressBar_img">
             </div>
             <p class="question6__q">
-                오늘도 뿌듯한 하루였다. 하루를 끝마치며 잠든 나의 모습은?
+                오늘도 뿌듯한 하루였다. 
+                <br>하루를 끝마치며 잠든 나의 모습은?
             </p>
             <div class="question6__a">
-                <button class="question6__a__1">눕자마자 잠이 든다</button>
-                <button class="question6__a__2">옆으로 누워잔다</button>
-                <button class="question6__a__3">이불을 끌어안고 잔다</button>
-                <button class="question6__a__4">잠버릇이 고약하다</button>
+                <button class="question6__a__1" type="button" onclick="js:next15('잠만보')">눕자마자 잠이 든다</button>
+                <button class="question6__a__2" type="button" onclick="js:next15('새우잠')">옆으로 누워잔다</button>
+                <button class="question6__a__3" type="button" onclick="js:next15('이불도둑')">이불을 끌어안고 잔다</button>
+                <button class="question6__a__4" type="button" onclick="js:next15('코골이')">잠버릇이 고약하다</button>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- loading -->
-    <section id="loading">
-        <div class="loading__container">
-            <p class="loading__content">동물로 변신 중...</p>
-            <img src="" alt="" class="loading__img">
-        </div>
-    </section>
-
-    <!-- result -->
-    <section id="result">
-        <h1 class="result__animal"></h1>
-        <img src="" alt="" class="result__img">
-        <h1 class="result__animal"></h1>
-        <p class="result__content">당신은 ...</p>
-        <button>tag</button> <button>tag</button> <button>tag</button>
-        <div class="result__sns">
-            <div class="result__sns__facebook"></div>
-            <div class="result__sns__instagram"></div>
-            <div class="result__sns__twitter"></div>
-            <div class="result__sns__kakao"></div>
-        </div>
-        <button class="result__discord"></button>
-        <button class="result__retry"></button>
-    </section>
+            <!-- loading -->
+        <section id="loading" onload="js:loading_func()">
+            <div class="loading__container">
+                <p class="loading__content">동물로 변신 중...</p>
+                <img src="{% static 'img/img1.png' %}" alt="변신" class="loading__img">
+                <img src="{% static 'img/img2.png' %}" alt="변신" class="loading__img">
+                <img src="{% static 'img/img3.png' %}" alt="변신" class="loading__img">
+                <img src="{% static 'img/img4.png' %}" alt="변신" class="loading__img">
+            </div>
+        </section>
+            
+            <!-- result -->
+        <section id="result">
+            <div class="result__container">
+                <p class="result__content">{{nickname}}님, 모현의 숲에서 당신은</p>
+                <!-- <img src="" alt="" class="result__img"> -->
+                <div class="result__img"></div>
+                <h1 class="result__sentence"></h1>
+                <p class="result__description"></p>
+                <button class="result__tag_1">tag</button>
+                <button class="result__tag_2">tag</button>
+                <button class="result__tag_3">tag</button>
+                <div class="result__sns">
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6298c97359c75b1a"></script>
+                    <div class="addthis_inline_share_toolbox_eojj"></div>
+            
+                </div>
+                <button
+                    class="result__btn"
+                    name="result"
+                    onclick="js:next16()"
+                ><a href="{% url 'result' %}">모현의 숲에 결과 전송하기</a></button>
+            </div>
+        </section>
+    </form>
 </body>
 </html>
