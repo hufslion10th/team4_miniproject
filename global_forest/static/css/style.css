@@ -729,6 +729,13 @@ input {
     margin-bottom: 10px;
 }
 
+#result1 {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+
 /* animation */
 @keyframes fadeIn {
     from {opacity: 0;}
@@ -777,8 +784,18 @@ input {
         width: 300px;
     }
 
+    .onboard__container {
+        margin: auto;
+        width: 450px;
+    }
+
     .onboard__btn {
         width: 250px;
+    }
+
+    .onboard1__container {
+        margin: auto;
+        width: 450px;
     }
 
     .onboard1__a__1, .onboard1__a__2, .onboard1__a__3 {
@@ -841,7 +858,7 @@ input {
         width: 300px;
     }
 
-    .result__container {
+    .result1__container {
         margin: auto;
         width: 450px;
     }
