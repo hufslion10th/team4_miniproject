@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모여봐요! 모현의 숲</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/main.js' %}" defer></script>
+</head>
+
+<body>
+  <h1>감사합니다.</h1>
+  <button class="result__retry"><a href="{% url 'home' %}">다시 테스트하기</a></button>
+  <button class="result__discord"><a href="외대디스코드링크">외대 디스코드 입장</a></button>
+</body>

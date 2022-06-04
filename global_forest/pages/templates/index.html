@@ -120,7 +120,7 @@
                 <br>이 동물은?
             </p>
             <div class="question1__a">
-                <button class="question1__a__1" type="button" onclick="js:next10('부엉이'); {}">부엉이</button>
+                <button class="question1__a__1" type="button" onclick="js:next10('부엉이')">부엉이</button>
                 <button class="question1__a__2" type="button" onclick="js:next10('고양이')">고양이</button>
                 <button class="question1__a__3" type="button" onclick="js:next10('너구리')">너구리</button>
                 <button class="question1__a__4" type="button" onclick="js:next10('아기사슴')">아기사슴</button>
@@ -204,26 +204,25 @@
                 오늘도 뿌듯한 하루였다. 하루를 끝마치며 잠든 나의 모습은?
             </p>
             <div class="question6__a">
-                <button class="question6__a__1" type="button">눕자마자 잠이 든다</button>
-                <button class="question6__a__2" type="button">옆으로 누워잔다</button>
-                <button class="question6__a__3" type="button">이불을 끌어안고 잔다</button>
-                <button class="question6__a__4" type="button">잠버릇이 고약하다</button>
-                <button name="result" onclick="js:next16()">결과보기</button>
-            </div>
-        </section>
-        
-        <!-- loading -->
-        <section id="loading">
-            <div class="loading__container">
-                <p class="loading__content">동물로 변신 중...</p>
-                <img src="" alt="" class="loading__img">
+                <button class="question6__a__1" type="button" onclick="js:next15('잠만보')">눕자마자 잠이 든다</button>
+                <button class="question6__a__2" type="button" onclick="js:next15('새우잠')">옆으로 누워잔다</button>
+                <button class="question6__a__3" type="button" onclick="js:next15('이불도둑')">이불을 끌어안고 잔다</button>
+                <button class="question6__a__4" type="button" onclick="js:next15('코골이')">잠버릇이 고약하다</button>
             </div>
         </section>
 
-        <!-- result -->
+            <!-- loading -->
+        <section id="loading" onload="js:loading_func()">
+            <div class="loading__container">
+                <p class="loading__content">동물로 변신 중...</p>
+                <img src="{% static 'img/cherryblossom.png' %}" alt="변신" class="loading__img">
+            </div>
+        </section>
+            
+            <!-- result -->
         <section id="result">
             <div class="result__container">
-                <p class="result__content">00님, 모현의 숲에서 당신은</p>
+                <p class="result__content">{{nickname}}님, 모현의 숲에서 당신은</p>
                 <!-- <img src="" alt="" class="result__img"> -->
                 <div class="result__img"></div>
                 <h1 class="result__sentence"></h1>
@@ -234,10 +233,13 @@
                 <div class="result__sns">
                     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6298c97359c75b1a"></script>
                     <div class="addthis_inline_share_toolbox_eojj"></div>
-
+            
                 </div>
-                <button class="result__discord">외대 디스코드 입장</button>
-                <button class="result__retry" onclick="js:next10">다시 테스트하기</button>
+                <button
+                    class="result__btn"
+                    name="result"
+                    onclick="js:next16()"
+                ><a href="{% url 'result' %}">모현의 숲에 결과 전송하기</a></button>
             </div>
         </section>
     </form>

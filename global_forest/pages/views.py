@@ -16,3 +16,6 @@ class ResultCreateView(CreateView):
     # def form_valid(self, form):  #사용자가 입력한 값에 result를 추가해서 db에 save
     #   form.instance.result = self.request.POST["result"]
     #   return super().form_valid(form)
+
+def result(request):
+    return render(request, 'result.html')

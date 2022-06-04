@@ -87,11 +87,11 @@ input {
 
 /* intro */
 #intro {
-    background-image: url("../img/top.png"), url("../img/right.png"), url("../img/top.png"),url("../img/left.png");
+    background-image: url("../img/top.png"), url("../img/right.png"), url("../img/bottom.png"),url("../img/left.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top, bottom, left, right;
-    display: none;
+    display: block;
     text-align: center;
     height: 180vw;
     position: relative;
@@ -344,7 +344,7 @@ input {
 /* question1 */
 
 #question1 {
-    display: block;
+    display: none;
     text-align: center;
     height: 180vw;
     position: relative;
@@ -589,6 +589,8 @@ input {
     margin-bottom: 10px;
 }
 
+
+
 /* loading */
 
 #loading {
@@ -661,6 +663,16 @@ input {
     width: 80vw;
     height: 50px;
     margin-bottom: 10px;
+}
+
+.result__btn {
+    width: 80vw;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+#result__data {
+    display: none;
 }
 
 /* animation */
