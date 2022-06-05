@@ -21,7 +21,7 @@
     --font-large: 22px;
     --font-medium: 20px;  /* 질문 */
     --font-regular: 14px;  /* 답변 */
-    --font-small: 12px;
+    --font-small: 10px;
 
     /* Font weight */
     --weight-bold: 700;
@@ -107,24 +107,28 @@ input {
 }
 
 .intro__logo {
-    width: 300px;
+    width: 70vw;
+    margin-bottom: 10px;
 }
 
 .intro__btn {
-    margin: 50px 0;
-    width: 200px;
-    height: 45px;
+    padding: 0;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 65vw;
+    height: 50px;
 }
 
 .intro__footer {
     display: flex;
     justify-content: center;
     position: relative;
+    bottom: -91%;
 }
 
 .intro__footer__img {
-    width: 20px;
-    margin-right: 10px;
+    width: 15px;
+    margin-right: 3px;
 }
 
 .intro__footer__p {
@@ -160,8 +164,8 @@ input {
 }
 
 .opening__btn {
-    width: 250px;
-    height: 65px;
+    width: 80vw;
+    height: 50px;
 }
 
 /* onboard */
@@ -204,7 +208,7 @@ input {
 }
 
 .onboard__btn {
-    width: 40vw;
+    width: 290px;
     height: 50px;
     margin-top: 30px;
 }
@@ -265,7 +269,7 @@ input {
 
 .onboard1_1__content {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .onboard1_1__num__subtext {
@@ -279,7 +283,7 @@ input {
 }
 
 .onboard1_1__major__text {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .onboard1_1__major__subtext {
@@ -293,7 +297,7 @@ input {
 }
 
 .onboard1_1__btn {
-    width: 80vw;
+    width: 290px;
     height: 50px;
     margin-bottom: 10px;
     margin-top: 30px;
@@ -317,7 +321,7 @@ input {
 }
 
 .onboard1_2__content {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .onboard1_2__img {
@@ -344,7 +348,7 @@ input {
 }
 
 .onboard1_3__content {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .onboard1_3__img {
@@ -362,20 +366,26 @@ input {
     position: relative;
 }
 
-
 .question1__progressBar {
     display: inline-block;
-    height: 10px;
+    height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
     border: 1px solid var(--color-button);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 70px 0;
     position: relative;
 }
 
+.question1__container {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #question1 .progressBar {
-    height: 10px;
+    height: 5px;
     width: calc(100/6*1%);
     background-color: var(--color-button);
 }
@@ -388,7 +398,7 @@ input {
 }
 
 .question1__q {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .question1__a__1, .question1__a__2, .question1__a__3, .question1__a__4 {
@@ -406,19 +416,26 @@ input {
     position: relative;
 }
 
+.question2__container {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .question2__progressBar {
     display: inline-block;
-    height: 10px;
+    height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
     border: 1px solid var(--color-button);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 70px 0;
     position: relative;
 }
 
 #question2 .progressBar {
-    height: 10px;
+    height: 5px;
     width: calc(100/6*2%);
     background-color: var(--color-button);
 }
@@ -436,7 +453,7 @@ input {
 }
 
 .question2__q {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .question2__a__1, .question2__a__2, .question2__a__3, .question2__a__4, .question2__a__5 {
@@ -454,19 +471,26 @@ input {
     position: relative;
 }
 
+.question3__container {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .question3__progressBar {
     display: inline-block;
-    height: 10px;
+    height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
     border: 1px solid var(--color-button);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 70px 0;
     position: relative;
 }
 
 #question3 .progressBar {
-    height: 10px;
+    height: 5px;
     width: calc(100/6*3%);
     background-color: var(--color-button);
 }
@@ -490,7 +514,8 @@ input {
 }
 
 .question3__q {
-    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 70px;
 }
 
 .question3__a__1, .question3__a__2, .question3__a__3, .question3__a__4, .question3__a__5 {
@@ -508,19 +533,27 @@ input {
     position: relative;
 }
 
+.question4__container {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .question4__progressBar {
     display: inline-block;
-    height: 10px;
+    height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
     border: 1px solid var(--color-button);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 70px 0;
     position: relative;
 }
 
+
 #question4 .progressBar {
-    height: 10px;
+    height: 5px;
     width: calc(100/6*4%);
     background-color: var(--color-button);
 }
@@ -544,7 +577,7 @@ input {
 }
 
 .question4__q {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .question4__a__1, .question4__a__2, .question4__a__3, .question4__a__4 {
@@ -562,19 +595,26 @@ input {
     position: relative;
 }
 
+.question5__container {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .question5__progressBar {
     display: inline-block;
-    height: 10px;
+    height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
     border: 1px solid var(--color-button);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 70px 0;
     position: relative;
 }
 
 #question5 .progressBar {
-    height: 10px;
+    height: 5px;
     width: calc(100/6*5%);
     background-color: var(--color-button);
 }
@@ -587,7 +627,7 @@ input {
 }
 
 .question5__q {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .question5__a__1, .question5__a__2, .question5__a__3, .question5__a__4 {
@@ -605,19 +645,26 @@ input {
     position: relative;
 }
 
+.question6__container {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .question6__progressBar {
     display: inline-block;
-    height: 10px;
+    height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
     border: 1px solid var(--color-button);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 70px 0;
     position: relative;
 }
 
 #question6 .progressBar {
-    height: 10px;
+    height: 5px;
     width: calc(100/6*6%);
     background-color: var(--color-button);
 }
@@ -630,7 +677,7 @@ input {
 }
 
 .question6__q {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .question6__a__1, .question6__a__2, .question6__a__3, .question6__a__4 {
@@ -644,7 +691,7 @@ input {
 #loading {
     display: none;
     text-align: center;
-    height: 180vw;
+    height: calc(100vw/9 * 16);
     position: relative;
 }
 
@@ -658,7 +705,7 @@ input {
 
 .loading__img {
     margin-top: 30px;
-    width: 80vw;
+    width: 200px;
 }
 
 /* result */
@@ -681,21 +728,22 @@ input {
     margin: auto;
     width: 80vw;
     height: 200px;
-    background-color: var(--color-button);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .result__sentence {
-    padding: 10px;
+    margin-top: 50px;
     font-family: 'yg-jalnan';
 }
 
 .result__description {
     padding: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .result__tag_1, .result__tag__2, .result__tag__3 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-left: 5px;
     height: 20px;
 }
@@ -705,11 +753,12 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .result__btn {
     height: 50px;
-    width: 250px;
+    width: 80vw;
 }
 
 .result__thanks {
@@ -780,7 +829,19 @@ input {
         height: 100vh;
     }
 
-    .opening__img {
+    .intro__logo {
+        width: 250px;
+    }
+
+    .intro__btn {
+        width: 250px;
+    }
+
+    .intro__footer {
+        bottom: -85%;
+    }
+
+    .opening__img, .opening__btn {
         width: 300px;
     }
 
@@ -855,6 +916,10 @@ input {
     }
 
     .loading__img {
+        width: 300px;
+    }
+
+    .result__btn {
         width: 300px;
     }
 
