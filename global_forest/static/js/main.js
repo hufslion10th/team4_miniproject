@@ -19,19 +19,19 @@ const keyArray = new Array();
 const tagArray = new Array();
 
 const descriptionArray = [
-    {"key":"아시아에서 살고 개발자인 아기사슴", "description": "당신은 디버깅을 잘하는 아시아의 아기 사슴이군요!"},
-    {"key":"아시아에서 살고 개발자인 너구리", "description": "당신은 코딩 천재 매운맛 아시안 농심 너구리군요!"},
-    {"key":"아시아에서 살고 개발자인 부엉이", "description": "당신은 그 귀하다는 외대 출신 개발자 BOO입니까?"},
-    {"key":"아시아에서 살고 개발자인 고양이", "description": "당신은 노트북만 보고있는 아시아의 고양이군요!!"},
+    {"key":"아시아에서 살고 개발자인 아기사슴", "description": "당신은 디버깅을 잘하는 아시아의 아기 사슴이군요!", "img":"../static/img/개발자_아기사슴.png"},
+    {"key":"아시아에서 살고 개발자인 너구리", "description": "당신은 코딩 천재 매운맛 아시안 농심 너구리군요!", "img":"../static/img/개발자_아기사슴.png"},
+    {"key":"아시아에서 살고 개발자인 부엉이", "description": "당신은 그 귀하다는 외대 출신 개발자 BOO입니까?", "img":"../static/img/개발자_아기사슴.png"},
+    {"key":"아시아에서 살고 개발자인 고양이", "description": "당신은 노트북만 보고있는 아시아의 고양이군요!!", "img":"../static/img/개발자_아기사슴.png"},
 
-    {"key":"아시아에서 살고 예술가인 아기사슴", "description": "당신은 아시아의 패션 트렌드를 선두하는 옷잘알 아기사슴이군요!"},
-    {"key":"아시아에서 살고 예술가인 너구리", "description": "당신은 아시아에서 농심 표지 디자인을 한 너구리군요!"},
-    {"key":"아시아에서 살고 예술가인 부엉이", "description": "당신은 아시아를 대표하는 세계를 순회하며 노래하는 부엉이군요!"},
-    {"key":"아시아에서 살고 예술가인 고양이", "description": "당신은 아시아 거리를 자유롭게 거닐며 예술을 하는 고양이군요!"},
+    {"key":"아시아에서 살고 예술가인 아기사슴", "description": "당신은 아시아의 패션 트렌드를 선두하는 옷잘알 아기사슴이군요!", "img":"../static/img/개발자_아기사슴.png"},
+    {"key":"아시아에서 살고 예술가인 너구리", "description": "당신은 아시아에서 농심 표지 디자인을 한 너구리군요!", "img":"../static/img/개발자_아기사슴.png"},
+    {"key":"아시아에서 살고 예술가인 부엉이", "description": "당신은 아시아를 대표하는 세계를 순회하며 노래하는 부엉이군요!", "img":"../static/img/개발자_아기사슴.png"},
+    {"key":"아시아에서 살고 예술가인 고양이", "description": "당신은 아시아 거리를 자유롭게 거닐며 예술을 하는 고양이군요!", "img":"../static/img/개발자_아기사슴.png"},
 
     {"key":"아시아에서 살고 요리사인 아기사슴", "description": "당신은 한국의 떡볶이를 세계화시킨 아기사슴이군요!"},
     {"key":"아시아에서 살고 요리사인 너구리", "description": "당신은 농심에서 스카웃한 코리안 너구리군요!"},
-    {"key":"아시아에서 살고 요리사인 부엉이", "description": "당신은 아시아에서 자취 요리를 마스터한 부엉이군요!"},
+    {"key":"아시아에서 살고 요리사인 부엉이", "description": "당신은 아시아에서 자취 요리를 마스터한 부엉이군요!"},s
     {"key":"아시아에서 살고 요리사인 고양이", "description": "당신은 솜방망이로 요리하는 아시안 셰프 고양이군요!"},
 
     {"key":"아시아에서 살고 마법사인 아기사슴", "description": "당신은 마법의 뿔을 가져 사냥꾼을 피해 다니는 아기사슴이군요! "},
@@ -343,9 +343,12 @@ function loading_func() {
 }
 
 function result_page() {
+    //결과+디스크립션
     const sentence = document.querySelector('.result__sentence');
     sentence.innerHTML = `${keyArray[1]}에서 살고 ${keyArray[2]}인 ${keyArray[0]}`;
     console.log(sentence.innerHTML);
+    
+    //이미지
 
     const result_tag1 = document.querySelector(".result__tag_1");
     result_tag1.innerHTML = `${tagArray[0]}`;
