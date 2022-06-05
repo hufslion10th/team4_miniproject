@@ -768,6 +768,14 @@ input {
     margin-bottom: 20px;
 }
 
+.link-icon {
+    width: 30px;
+}
+
+.facebook, .twitter {
+    margin-right: 20px;
+}
+
 .result__btn {
     height: 50px;
     width: 80vw;
