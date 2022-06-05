@@ -713,7 +713,7 @@ input {
 #result {
     display: none;
     text-align: center;
-    position: relative;
+    position: static;
 }
 
 .result__container {
@@ -725,34 +725,23 @@ input {
 }
 
 .result__both-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
     margin: auto;
-    width: 80vw;
-    height: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 
 .result__background-img {
-    right: 10%;
+    width: 300px;
     position: absolute;
-    margin: auto;
-    width: 80vw;
-    height: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1;
 }
 
 .result__img {
-    right: 10%;
     position: absolute;
-    margin: auto;
-    width: 80vw;
-    height: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 2;
+    width: 300px;
 }
 
 .result__sentence {
@@ -888,6 +877,10 @@ input {
 
     #onboard1_1 {
         text-align: center;
+    }
+
+    .onboard1_2__container, .onboard1_3__container {
+        width: 300px;
     }
 
     .onboard1_1__btn {
