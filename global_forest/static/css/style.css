@@ -724,18 +724,35 @@ input {
     margin: 50px 0;
 }
 
-.result__background-img {
-    margin: auto;
-    width: 80vw;
-    height: 200px;
-}
-
-.result__img {
+.result__both-img {
     margin: auto;
     width: 80vw;
     height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+
+.result__background-img {
+    right: 10%;
+    position: absolute;
+    margin: auto;
+    width: 80vw;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.result__img {
+    right: 10%;
+    position: absolute;
+    margin: auto;
+    width: 80vw;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
 }
 
 .result__sentence {
@@ -939,7 +956,7 @@ input {
         margin: 50px 0;
     }
 
-    .result__img {
+    .result__img, .result__background-img {
         width: 300px;
     }
 
