@@ -42,7 +42,7 @@ def result(request):
     colors = ['#ff9999', '#ffc000', '#8fd9b6', '#d395d0', '#7AD1FF']
     wedgeprops={'width': 0.7, 'edgecolor': 'w', 'linewidth': 5}
     plt.pie(ratio, labels=labels, autopct='%.1f%%', startangle=260, counterclock=False, colors=colors, wedgeprops=wedgeprops)
-    plt.savefig('C:/Users/lio86/Desktop/team4_mini_project/team4_miniproject/global_forest/static/img/top5_studentnumber.png')
+    plt.savefig('C:/Users/lio86/Desktop/team4_mini_project/team4_miniproject/global_forest/static/img/top5_studentnumber.png', transparent = True)
     plt.clf()
     ###############################################################################################################################
 
@@ -112,7 +112,7 @@ def result(request):
     colors = ['#ff9999', '#ffc000', '#8fd9b6', '#d395d0', '#7AD1FF']
     wedgeprops={'width': 0.7, 'edgecolor': 'w', 'linewidth': 5}
     plt.pie(ratio_2, labels=labels_2, autopct='%.1f%%', startangle=260, counterclock=False, colors=colors, wedgeprops=wedgeprops)
-    plt.savefig('C:/Users/lio86/Desktop/team4_mini_project/team4_miniproject/global_forest/static/img/top5_major.png')
+    plt.savefig('C:/Users/lio86/Desktop/team4_mini_project/team4_miniproject/global_forest/static/img/top5_major.png', transparent = True)
     return render(request, 'result.html')
 
 def decide_label(name):
