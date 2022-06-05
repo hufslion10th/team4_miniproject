@@ -1,0 +1,1 @@
+web: gunicorn global_forest.wsgi --log-file -
