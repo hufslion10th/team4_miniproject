@@ -724,6 +724,12 @@ input {
     margin: 50px 0;
 }
 
+.result__background-img {
+    margin: auto;
+    width: 80vw;
+    height: 200px;
+}
+
 .result__img {
     margin: auto;
     width: 80vw;

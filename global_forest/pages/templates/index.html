@@ -246,9 +246,8 @@
         <section id="result">
             <div class="result__container">
                 <p class="result__content">모현의 숲에서 당신은</p>
-                <!-- <div class="result__background"></div> -->
-
-                <img src="{% static 'img/coding_raccoon.png' %}" class="result__img" >
+                <img src="" class="result__background-img" />
+                <img src="" class="result__img" />
                 <!-- <div class="result__img"></div> -->
 
                 <h1 class="result__sentence"></h1>
@@ -266,7 +265,7 @@
                     name="result"
                     type="submit"
                     onclick="js:send_result()"
-                ><a href="{% url 'result' %}">모현의 숲에 결과 전송하기</a></button>
+                >모현의 숲에 결과 전송하기</a></button>
             </div>
         </section>
     </form>
