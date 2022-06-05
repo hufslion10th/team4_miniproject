@@ -805,6 +805,37 @@ input {
     position: relative;
 }
 
+.result1__container {
+    margin: auto;
+}
+
+.top5 {
+    /* display: flex;
+    justify-content: center; */
+    margin: auto;
+}
+
+.top5__studentnum__content {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: 'yg-jalnan';
+}
+
+.top5__studentnum {
+    width: 90vw;
+    border: 1px solid var(--color-text);
+}
+
+.top5__major__content {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: 'yg-jalnan';
+}
+
+.top5__major {
+    width: 90vw;
+    border: 1px solid var(--color-text);
+}
 
 /* animation */
 @keyframes fadeIn {
@@ -950,7 +981,7 @@ input {
 
     .result1__container {
         margin: auto;
-        width: 450px;
+        width: 700px;
     }
 
     .result__thanks {
@@ -964,6 +995,14 @@ input {
 
     .result__discord, .result__retry {
         width: 400px;
+    }
+
+    .top5__studentnum {
+        width: 500px;
+    }
+
+    .top5__major {
+        width: 500px;
     }
 
 }

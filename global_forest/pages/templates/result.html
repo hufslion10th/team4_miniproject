@@ -16,8 +16,12 @@
       <h1 class="result__thanks">감사합니다</h1>
       <button class="result__retry" onclick="js:replay()">다시 테스트하기</a></button>
       <button class="result__discord" onclick="js:discord()">외대 디스코드 입장</a></button>
-      <img src="{% static 'img/top5_studentnumber.png' %}" alt="">
-      <img src="{% static 'img/top5_major.png' %}" alt="">
+      <div class="top5">
+        <p class="top5__studentnum__content"><가장 많이 참여한 학번 Top5></p>
+        <img src="{% static 'img/top5_studentnumber.png' %}" alt="" class="top5__studentnum">
+        <p class="top5__major__content"><가장 많이 참여한 학과 Top5></p>
+        <img src="{% static 'img/top5_major.png' %}" alt="" class="top5__major">
+      </div>
     </div>
   </section>
   
