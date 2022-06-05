@@ -1,4 +1,4 @@
-# team4_miniproject 스터디4팀 미니프로젝트는 "들어봤니 모현의 숲"
+# "들어봤니 모현의 숲"
 
 <div align="center">
 
