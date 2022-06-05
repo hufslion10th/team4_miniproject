@@ -779,6 +779,7 @@ input {
 .result__btn {
     height: 50px;
     width: 80vw;
+    margin-bottom: 50px;
 }
 
 .result__thanks {
