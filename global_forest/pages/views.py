@@ -7,8 +7,23 @@ from django.shortcuts import render
 from django.db.models import Q
 import matplotlib.pyplot as plt
 import matplotlib
-matplotlib.rcParams['font.family'] = 'Malgun Gothic'
-matplotlib.rcParams['axes.unicode_minus'] = False
+import matplotlib.font_manager as fm
+
+#폰트 이름 출력
+# font_location = './static/fonts/NanumSquareRoundB.ttf'  #font 경로 설정
+# font_name = fm.FontProperties(fname=font_location).get_name()
+# print("==========================")
+# print(font_name)
+# print("==========================")
+
+#폰트 매니저에 새로운 폰트 추가
+font_dirs = ['./static/fonts/']
+font_files = fm.findSystemFonts(fontpaths=font_dirs)
+for font_file in font_files:
+    fm.fontManager.addfont(font_file)
+
+#폰트 변경
+plt.rcParams['font.family'] = 'NanumSquareRound'
 
 
 class ResultCreateView(CreateView):
@@ -21,6 +36,7 @@ class ResultCreateView(CreateView):
 
 
 def result(request):
+
     start = 14
     student_number_count = {}
     for i in range(9):
@@ -45,6 +61,7 @@ def result(request):
     labels = temp  # label에 ['key + 학번'] 형태의 리스트 입력
     colors = ['#ff9999', '#ffc000', '#8fd9b6', '#d395d0', '#7AD1FF']
     wedgeprops = {'width': 0.7, 'edgecolor': 'w', 'linewidth': 5}
+
     plt.pie(ratio, labels=labels, autopct='%.1f%%', startangle=260,
             counterclock=False, colors=colors, wedgeprops=wedgeprops)
     plt.savefig('./static/img/top5_studentnumber.png', transparent=True)

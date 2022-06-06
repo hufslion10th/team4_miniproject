@@ -403,7 +403,11 @@ function result_page() {
 
 function shareTwitter() {
     let sendText = "놀러와요! 모현의 숲";
+<<<<<<< Updated upstream
     let sendUrl = "https://team4-miniproject.herokuapp.com";
+=======
+    let sendUrl = "https://team4-miniproejct.herokuapp.com";
+>>>>>>> Stashed changes
     window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
 
