@@ -326,7 +326,6 @@ function discord() {
     alert('외대생만을 위한 디스코드 채널을 준비 중입니다.');
 }
 
-
 let idx = 0;
 
 function changeImgs() {
@@ -404,12 +403,12 @@ function result_page() {
 
 function shareTwitter() {
     let sendText = "놀러와요! 모현의 숲";
-    let sendUrl = "https://team4-deploy.herokuapp.com";
+    let sendUrl = "https://team4-miniproject.herokuapp.com";
     window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
 
 function shareFacebook() {
-    let sendUrl = "https://team4-deploy.herokuapp.com"; // 전달할 URL
+    let sendUrl = "https://team4-miniproject.herokuapp.com"; // 전달할 URL
     window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 }
 
@@ -423,10 +422,10 @@ function shareKakao() {
         content: {
             title: "놀러와요! 모현의 숲", 
             description: "모현의 숲에서 당신은 어떤 동물일까요? 확인해보세요!", 
-            imageUrl: "https://team4-deploy.herokuapp.com",
+            imageUrl: "https://team4-miniproject.herokuapp.com",
             link: {
-                mobileWebUrl: "https://team4-deploy.herokuapp.com",
-                webUrl: "https://team4-deploy.herokuapp.com"
+                mobileWebUrl: "https://team4-miniproject.herokuapp.com",
+                webUrl: "https://team4-miniproject.herokuapp.com"
             }
             }
         });
