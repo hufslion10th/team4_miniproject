@@ -32,7 +32,7 @@ class ResultCreateView(CreateView):
     form_class = ResultModelForm
 
     def get_success_url(self):
-        return reverse('result')
+        return reverse('result')  #두 번째 html 파일 이름으로 수정
 
 
 def result(request):
