@@ -35,7 +35,7 @@
                 <p class="opening__content">
                     어느날, 정신을 차려보니 <br> 한국외대 글로벌캠퍼스에 도착해있는 당신
                 </p>
-                <img src="{% static 'img/cherryblossom.png' %}" alt="" class="opening__img">
+                <img src="{% static 'img/cherryblossom.jpg' %}" alt="" class="opening__img">
                 <p class="opening__content">
                     용인시 모현, 산으로 둘러쌓여<br>
                     "모현의 숲"이라고도 불리는 외대 글캠,<br>
@@ -61,7 +61,7 @@
                 <button class="onboard__btn" type="button" onclick="js:next3()">Enter</button>
             </div>
         </section>
- 
+
         <!-- onboard1 -->
         <section id="onboard1">
             <div class="onboard1__container">
@@ -70,7 +70,7 @@
                     여기는 어떻게 오셨나요?
                 </p>
                 <div class="onboard1__a">
-                    <button class="onboard1__a__1" type="button" onclick="js:next4()">모현 외대생입니다</button>
+                    <button class="onboard1__a__1" type="button" onclick="js:next4()">외대생입니다</button>
                     <button class="onboard1__a__2" type="button" onclick="js:next5()">예비 외대생입니다</button>
                     <button class="onboard1__a__3" type="button" onclick="js:next6()">놀러왔어요</button>
                 </div>
@@ -100,7 +100,7 @@
         <section id="onboard1_2">
             <div class="onboard1_2__container">
                 <p class="onboard1_2__content">예비 샌애기로군요! <br> "모현의 숲"에 오신걸 환영합니다</p>
-                <img src="{% static 'img/heyboo.png' %}" alt="" class="onboard1_2__img">
+                <img src="{% static 'img/freshman.jpg' %}" alt="" class="onboard1_2__img">
                 <button class="onboard1_1__btn" type="button" onclick="js:next8()">모현의 숲 입장!</button>
             </div>
         </section>
@@ -109,7 +109,7 @@
         <section id="onboard1_3">
             <div class="onboard1_3__container">
                 <p class="onboard1_3__content">"모현의 숲"은 처음이겠군요! <br> 환영합니다</p>
-                <img src="{% static 'img/heyboo.png' %}" alt="" class="onboard1_3__img">
+                <img src="{% static 'img/first.jpg' %}" alt="" class="onboard1_3__img">
                 <button class="onboard1_1__btn" type="button" onclick="js:next9()">모현의 숲 입장!</button>
             </div>
         </section>
@@ -127,10 +127,10 @@
                     <br>이 동물은?
                 </p>
                 <div class="question1__a">
-                    <button class="question1__a__1" type="button" onclick="js:next10('부엉이')">부엉이</button>
-                    <button class="question1__a__2" type="button" onclick="js:next10('고양이')">고양이</button>
-                    <button class="question1__a__3" type="button" onclick="js:next10('너구리')">너구리</button>
-                    <button class="question1__a__4" type="button" onclick="js:next10('아기사슴')">아기사슴</button>
+                    <button class="question1__a__1" type="button" onclick="js:next10('부엉이')">과잠입은 파란 부엉이</button>
+                    <button class="question1__a__2" type="button" onclick="js:next10('고양이')">시크한 치즈 고양이</button>
+                    <button class="question1__a__3" type="button" onclick="js:next10('너구리')">오동통 다크서클 너구리</button>
+                    <button class="question1__a__4" type="button" onclick="js:next10('아기사슴')">큐티 섹시한 사슴</button>
                 </div>
             </div>
         </section>
@@ -251,7 +251,11 @@
         <!-- result -->
     <section id="result">
         <div class="result__container">
-            <p class="result__content" id="result_name"></p>
+            <div class="result__content">
+                <span class="result__content" id="result_text1"></span>
+                <b><span class="result__content" id="result_name"></span></b>
+                <span class="result__content" id="result_text2"></span>
+            </div>
             <div class="result__both-img">
                 <img src="" class="result__background-img" />
                 <img src="" class="result__img" />
@@ -260,9 +264,17 @@
 
             <h1 class="result__sentence"></h1>
             <p class="result__description"></p>
-            <button class="result__tag_1" type="button">tag</button>
-            <button class="result__tag_2" type="button">tag</button>
-            <button class="result__tag_3" type="button">tag</button>
+            <div class="tag__container">
+                <button class="result__tag_1" type="button">tag</button>
+                <button class="result__tag_2" type="button">tag</button>
+                <button class="result__tag_3" type="button">tag</button>
+            </div>
+            <button
+                class="result__btn"
+                name="result"
+                type="submit"
+                onclick="js:send_result()"
+            >Next ></button>
             <div class="result__sns">
                 <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6298c97359c75b1a"></script>
                 <div class="addthis_inline_share_toolbox"></div> -->
@@ -276,12 +288,6 @@
                     <img src="{% static 'img/icon-kakao.png' %}" alt="" class="kakao__img">
                 </a>
             </div>
-            <button
-                class="result__btn"
-                name="result"
-                type="submit"
-                onclick="js:send_result()"
-            >외대생이라면? 이벤트 참여하기!</button>
             <ins class="kakao_ad_area" style="display:block;" 
             data-ad-unit    = "DAN-htTw7pargqdYkDQS" 
             data-ad-width   = "320" 
@@ -293,7 +299,9 @@
         // nickname 입력 시 수행되는 함수 
         function printName(){  
             const name = document.querySelector("#divname > input").value;
-            document.getElementById("result_name").innerText = "모현의 숲에서 " + name + "님은...";
+            document.getElementById("result_text1").innerText = "모현의 숲에서 ";
+            document.getElementById("result_name").innerText = name;
+            document.getElementById("result_text2").innerText = "님은...";
         }
     </script>
 </body>
