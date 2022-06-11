@@ -66,7 +66,7 @@
                     여기는 어떻게 오셨나요?
                 </p>
                 <div class="onboard1__a">
-                    <button class="onboard1__a__1" type="button" onclick="js:next4()">모현 외대생입니다</button>
+                    <button class="onboard1__a__1" type="button" onclick="js:next4()">외대생입니다</button>
                     <button class="onboard1__a__2" type="button" onclick="js:next5()">예비 외대생입니다</button>
                     <button class="onboard1__a__3" type="button" onclick="js:next6()">놀러왔어요</button>
                 </div>
@@ -123,10 +123,10 @@
                     <br>이 동물은?
                 </p>
                 <div class="question1__a">
-                    <button class="question1__a__1" type="button" onclick="js:next10('부엉이')">부엉이</button>
-                    <button class="question1__a__2" type="button" onclick="js:next10('고양이')">고양이</button>
-                    <button class="question1__a__3" type="button" onclick="js:next10('너구리')">너구리</button>
-                    <button class="question1__a__4" type="button" onclick="js:next10('아기사슴')">아기사슴</button>
+                    <button class="question1__a__1" type="button" onclick="js:next10('부엉이')">과잠 입은 부엉이</button>
+                    <button class="question1__a__2" type="button" onclick="js:next10('고양이')">동네 일진 고양이</button>
+                    <button class="question1__a__3" type="button" onclick="js:next10('너구리')">혼밥 하는 너구리</button>
+                    <button class="question1__a__4" type="button" onclick="js:next10('아기사슴')">오픈카 타는 아기사슴</button>
                 </div>
             </div>
         </section>
@@ -255,9 +255,17 @@
 
                 <h1 class="result__sentence"></h1>
                 <p class="result__description"></p>
-                <button class="result__tag_1" type="button">tag</button>
-                <button class="result__tag_2" type="button">tag</button>
-                <button class="result__tag_3" type="button">tag</button>
+                <div class="tag__container">
+                    <button class="result__tag_1" type="button">tag</button>
+                    <button class="result__tag_2" type="button">tag</button>
+                    <button class="result__tag_3" type="button">tag</button>
+                </div>
+                <button
+                    class="result__btn"
+                    name="result"
+                    type="submit"
+                    onclick="js:send_result()"
+                >더보기</button>
                 <div class="result__sns">
                     <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6298c97359c75b1a"></script>
                     <div class="addthis_inline_share_toolbox"></div> -->
@@ -271,12 +279,6 @@
                         <img src="{% static 'img/icon-kakao.png' %}" alt="" class="kakao__img">
                     </a>
                 </div>
-                <button
-                    class="result__btn"
-                    name="result"
-                    type="submit"
-                    onclick="js:send_result()"
-                >외대생이라면? 이벤트 참여하기!</button>
                 <ins class="kakao_ad_area" style="display:block;" 
                 data-ad-unit    = "DAN-htTw7pargqdYkDQS" 
                 data-ad-width   = "320" 

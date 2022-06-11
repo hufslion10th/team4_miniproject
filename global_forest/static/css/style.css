@@ -15,6 +15,7 @@
     --color-text: #412917;
     --color-text-light: #94987E;
     --color-text-medium: #7E593E;
+    --color-progress: #a8c72a;
 
 
     /* Font Size */
@@ -92,7 +93,7 @@ input {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top, bottom, left, right;
-    display: block;
+    display: none;
     text-align: center;
     height: calc(100vw/9 * 16);
     position: relative;
@@ -371,7 +372,7 @@ input {
     height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
-    border: 1px solid var(--color-button);
+    border: 1px solid var(--color-progress);
     margin: 70px 0;
     position: relative;
 }
@@ -387,17 +388,18 @@ input {
 #question1 .progressBar {
     height: 5px;
     width: calc(100/6*1%);
-    background-color: var(--color-button);
+    background-color: var(--color-progress);
 }
 
 #question1 .progressBar_img {
     transform: translate(-60%, -60%);
     left: calc(100/6*1%);
     position: absolute;
-    width: 30px;
+    width: 35px;
 }
 
 .question1__q {
+    margin-top: 70px;
     margin-bottom: 70px;
 }
 
@@ -429,7 +431,7 @@ input {
     height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
-    border: 1px solid var(--color-button);
+    border: 1px solid var(--color-progress);
     margin: 70px 0;
     position: relative;
 }
@@ -437,14 +439,14 @@ input {
 #question2 .progressBar {
     height: 5px;
     width: calc(100/6*2%);
-    background-color: var(--color-button);
+    background-color: var(--color-progress);
 }
 
 #question2 .progressBar_img {
     transform: translate(-60%, -60%);
     left: calc(100/6*2%);
     position: absolute;
-    width: 30px;
+    width: 35px;
 }
 
 .question2__img {
@@ -453,6 +455,7 @@ input {
 }
 
 .question2__q {
+    margin-top: 70px;
     margin-bottom: 70px;
 }
 
@@ -484,7 +487,7 @@ input {
     height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
-    border: 1px solid var(--color-button);
+    border: 1px solid var(--color-progress);
     margin: 70px 0;
     position: relative;
 }
@@ -492,14 +495,14 @@ input {
 #question3 .progressBar {
     height: 5px;
     width: calc(100/6*3%);
-    background-color: var(--color-button);
+    background-color: var(--color-progress);
 }
 
 #question3 .progressBar_img {
     transform: translate(-60%, -60%);
     left: calc(100/6*3%);
     position: absolute;
-    width: 30px;
+    width: 35px;
 }
 
 .question3__img {
@@ -510,11 +513,11 @@ input {
 .question3__now {
     height: 10px;
     width: calc(100/6*3%);
-    background-color: var(--color-button);
+    background-color: var(--color-progress);
 }
 
 .question3__q {
-    margin-top: 50px;
+    margin-top: 70px;
     margin-bottom: 70px;
 }
 
@@ -546,7 +549,7 @@ input {
     height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
-    border: 1px solid var(--color-button);
+    border: 1px solid var(--color-progress);
     margin: 70px 0;
     position: relative;
 }
@@ -555,14 +558,14 @@ input {
 #question4 .progressBar {
     height: 5px;
     width: calc(100/6*4%);
-    background-color: var(--color-button);
+    background-color: var(--color-progress);
 }
 
 #question4 .progressBar_img {
     transform: translate(-60%, -60%);
     left: calc(100/6*4%);
     position: absolute;
-    width: 30px;
+    width: 35px;
 }
 
 .question4__img {
@@ -573,10 +576,11 @@ input {
 .question4__now {
     height: 10px;
     width: calc(100/6*4%);
-    background-color: var(--color-button);
+    background-color: var(--color-progress);
 }
 
 .question4__q {
+    margin-top: 70px;
     margin-bottom: 70px;
 }
 
@@ -608,7 +612,7 @@ input {
     height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
-    border: 1px solid var(--color-button);
+    border: 1px solid var(--color-progress);
     margin: 70px 0;
     position: relative;
 }
@@ -616,17 +620,18 @@ input {
 #question5 .progressBar {
     height: 5px;
     width: calc(100/6*5%);
-    background-color: var(--color-button);
+    background-color: var(--color-progress);
 }
 
 #question5 .progressBar_img {
     transform: translate(-60%, -60%);
     left: calc(100/6*5%);
     position: absolute;
-    width: 30px;
+    width: 35px;
 }
 
 .question5__q {
+    margin-top: 70px;
     margin-bottom: 70px;
 }
 
@@ -658,7 +663,7 @@ input {
     height: 5px;
     width: 80vw;
     border-radius: var(--border-radius);
-    border: 1px solid var(--color-button);
+    border: 1px solid var(--color-progress);
     margin: 70px 0;
     position: relative;
 }
@@ -666,17 +671,18 @@ input {
 #question6 .progressBar {
     height: 5px;
     width: calc(100/6*6%);
-    background-color: var(--color-button);
+    background-color: var(--color-progress);
 }
 
 #question6 .progressBar_img {
     transform: translate(-60%, -60%);
     left: calc(100/6*6%);
     position: absolute;
-    width: 30px;
+    width: 35px;
 }
 
 .question6__q {
+    margin-top: 70px;
     margin-bottom: 70px;
 }
 
@@ -758,6 +764,10 @@ input {
     margin-bottom: 20px;
     margin-left: 5px;
     height: 20px;
+}
+
+.tag__container {
+    margin-bottom: 50px;
 }
 
 .result__sns {
