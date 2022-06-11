@@ -403,32 +403,20 @@ function result_page() {
 
 function shareTwitter() {
     let sendText = "놀러와요! 모현의 숲";
-    let sendUrl = "https://team4-miniproject.herokuapp.com";
+    let sendUrl = "https://mohyeon-forest.herokuapp.com";
     window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
 
 function shareFacebook() {
-    let sendUrl = "https://team4-miniproject.herokuapp.com"; // 전달할 URL
+    let sendUrl = "https://mohyeon-forest.herokuapp.com"; // 전달할 URL
     window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 }
 
-
 function shareKakao() {
     Kakao.init('61fe53866bbc30602ec4bbd4df5b909c');
-
-    Kakao.Link.createDefaultButton({
-        container: '#btnKakao', 
-        objectType: 'feed',
-        content: {
-            title: "놀러와요! 모현의 숲", 
-            description: "모현의 숲에서 당신은 어떤 동물일까요? 확인해보세요!", 
-            imageUrl: "https://team4-miniproject.herokuapp.com",
-            link: {
-                mobileWebUrl: "https://team4-miniproject.herokuapp.com",
-                webUrl: "https://team4-miniproject.herokuapp.com"
-            }
-            }
-        });
+    Kakao.Link.sendCustom({
+        templateId : 78102
+    });
 }
 
 document.addEventListener('keydown', function(event) { if (event.keyCode === 13) { event.preventDefault(); }; }, true);
