@@ -235,75 +235,75 @@
                 </div>
             </div>
         </section>
-    </form>
 
         <!-- loading -->
-    <section id="loading" onload="js:loading_func()">
-        <div class="loading__container">
-            <p class="loading__content">동물로 변신 중...</p>
-            <img src="{% static 'img/img1.png' %}" alt="변신" class="loading__img">
-            <img src="{% static 'img/img2.png' %}" alt="변신" class="loading__img">
-            <img src="{% static 'img/img3.png' %}" alt="변신" class="loading__img">
-            <img src="{% static 'img/img4.png' %}" alt="변신" class="loading__img">
-        </div>
-    </section>
+        <section id="loading" onload="js:loading_func()">
+            <div class="loading__container">
+                <p class="loading__content">동물로 변신 중...</p>
+                <img src="{% static 'img/img1.png' %}" alt="변신" class="loading__img">
+                <img src="{% static 'img/img2.png' %}" alt="변신" class="loading__img">
+                <img src="{% static 'img/img3.png' %}" alt="변신" class="loading__img">
+                <img src="{% static 'img/img4.png' %}" alt="변신" class="loading__img">
+            </div>
+        </section>
 
-        <!-- result -->
-    <section id="result">
-        <div class="result__container">
-            <div class="result__content">
-                <span class="result__content" id="result_text1"></span>
-                <b><span class="result__content" id="result_name"></span></b>
-                <span class="result__content" id="result_text2"></span>
-            </div>
-            <div class="result__both-img">
-                <img src="" class="result__background-img" />
-                <img src="" class="result__img" />
-            </div>
-            <!-- <div class="result__img"></div> -->
+            <!-- result -->
+        <section id="result">
+            <div class="result__container">
+                <div class="result__content">
+                    <span class="result__content" id="result_text1"></span>
+                    <b><span class="result__content" id="result_name"></span></b>
+                    <span class="result__content" id="result_text2"></span>
+                </div>
+                <div class="result__both-img">
+                    <img src="" class="result__background-img" />
+                    <img src="" class="result__img" />
+                </div>
+                <!-- <div class="result__img"></div> -->
 
-            <h1 class="result__sentence"></h1>
-            <p class="result__description"></p>
-            <div class="tag__container">
-                <button class="result__tag_1" type="button">tag</button>
-                <button class="result__tag_2" type="button">tag</button>
-                <button class="result__tag_3" type="button">tag</button>
+                <h1 class="result__sentence"></h1>
+                <p class="result__description"></p>
+                <div class="tag__container">
+                    <button class="result__tag_1" type="button">tag</button>
+                    <button class="result__tag_2" type="button">tag</button>
+                    <button class="result__tag_3" type="button">tag</button>
+                </div>
+                <button
+                    class="result__btn"
+                    name="result"
+                    type="submit"
+                    onclick="js:send_result()"
+                >Next ></button>
+                <div class="result__sns">
+                    <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6298c97359c75b1a"></script>
+                    <div class="addthis_inline_share_toolbox"></div> -->
+                    <a id="btnFacebook" class="link-icon facebook" href="javascript:shareFacebook();" >
+                        <img src="{% static 'img/icon-facebook.png' %}" alt="" class="facebook__img">
+                    </a>
+                    <a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();" >
+                        <img src="{% static 'img/icon-twitter.png' %}" alt="" class="twitter__img">
+                    </a>
+                    <a id="btnKakao" class="link-icon kakao" href="javascript:shareKakao();">
+                        <img src="{% static 'img/icon-kakao.png' %}" alt="" class="kakao__img">
+                    </a>
+                </div>
+                <ins class="kakao_ad_area" style="display:block;" 
+                data-ad-unit    = "DAN-htTw7pargqdYkDQS" 
+                data-ad-width   = "320" 
+                data-ad-height  = "100"></ins> 
+                <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
             </div>
-            <button
-                class="result__btn"
-                name="result"
-                type="submit"
-                onclick="js:send_result()"
-            >Next ></button>
-            <div class="result__sns">
-                <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6298c97359c75b1a"></script>
-                <div class="addthis_inline_share_toolbox"></div> -->
-                <a id="btnFacebook" class="link-icon facebook" href="javascript:shareFacebook();" >
-                    <img src="{% static 'img/icon-facebook.png' %}" alt="" class="facebook__img">
-                </a>
-                <a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();" >
-                    <img src="{% static 'img/icon-twitter.png' %}" alt="" class="twitter__img">
-                </a>
-                <a id="btnKakao" class="link-icon kakao" href="javascript:shareKakao();">
-                    <img src="{% static 'img/icon-kakao.png' %}" alt="" class="kakao__img">
-                </a>
-            </div>
-            <ins class="kakao_ad_area" style="display:block;" 
-            data-ad-unit    = "DAN-htTw7pargqdYkDQS" 
-            data-ad-width   = "320" 
-            data-ad-height  = "100"></ins> 
-            <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-        </div>
-    </section>
-    <script>
-        // nickname 입력 시 수행되는 함수 
-        function printName(){  
-            const name = document.querySelector("#divname > input").value;
-            document.getElementById("result_text1").innerText = "모현의 숲에서 ";
-            document.getElementById("result_name").innerText = name;
-            document.getElementById("result_text2").innerText = "님은...";
-        }
-    </script>
+        </section>
+        <script>
+            // nickname 입력 시 수행되는 함수 
+            function printName(){  
+                const name = document.querySelector("#divname > input").value;
+                document.getElementById("result_text1").innerText = "모현의 숲에서 ";
+                document.getElementById("result_name").innerText = name;
+                document.getElementById("result_text2").innerText = "님은...";
+            }
+        </script>
+    </form>
 </body>
 </html>
 
