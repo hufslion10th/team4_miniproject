@@ -17,6 +17,7 @@ const result = document.querySelector("#result");
 const progressBar = document.querySelector(".progressBar");
 const keyArray = new Array();
 const tagArray = new Array();
+const view = document.querySelector(".intro__view");
 
 const descriptionArray = [
     {"key":"아시아에서 살고 개발자인 아기사슴","description": "당신은 디버깅을 잘하는 아시아의 아기 사슴이군요!", "img": "/static/img/developer_deer.png", "background": "/static/img/background_korea.png"}, 
@@ -420,3 +421,25 @@ function shareKakao() {
 }
 
 document.addEventListener('keydown', function(event) { if (event.keyCode === 13) { event.preventDefault(); }; }, true);
+
+function viewCount() {
+    today = new Date;
+    today.setMonth(today.getMonth() + 12);
+
+    hitCnt = cookieVal("pageHit");
+    hitCnt++;
+    document.cookie = "pageHit = " + hitCnt + ";expires" + today.toUTCString();
+
+    function cookieVal(cookieName) {
+        thisCookie = document.cookie.split("; ");  // '쿠키명=쿠키값; expires=유효기간'
+        for (let i = 0; i < thisCookie.length; i++) {
+            if (cookieName == thisCookie[i].split("=")[0]) {
+                return thisCookie[i].split("=")[1]
+            }
+        }
+    }
+    view.innerHTML= hitCnt + "명이 테스트에 참여했습니다!";
+    console.log(hitCnt);
+}
+
+viewCount();
