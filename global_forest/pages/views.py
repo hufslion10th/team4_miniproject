@@ -177,6 +177,7 @@ def result(request):
     plt.pie(ratio_2, labels=labels_2, autopct='%.1f%%', startangle=260,
             counterclock=False, colors=colors, wedgeprops=wedgeprops)
     plt.savefig('./static/img/top5_major.png', transparent=True)
+    plt.clf()
     return render(request, 'result.html')
 
 
