@@ -443,3 +443,7 @@ function viewCount() {
 }
 
 viewCount();
+
+function next_r()  {
+    window.location.href = './result'
+  }
